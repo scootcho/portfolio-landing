@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Assemblying Scottbot]]></title>
-  <link href="http://scootcho.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Noob | Assemblying Scottbot]]></title>
+  <link href="http://scootcho.github.io/blog/categories/noob/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
   <updated>2014-06-12T17:59:44-07:00</updated>
   <id>http://scootcho.github.io/</id>
