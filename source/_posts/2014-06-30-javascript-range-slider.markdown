@@ -3,7 +3,7 @@ layout: post
 title: "Javascript Range Slider"
 date: 2014-06-30 23:46:07 +0800
 comments: true
-categories: 
+categories: [javascript, codeplayer, time]
 ---
 3.5 hrs
 
