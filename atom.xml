@@ -4,7 +4,7 @@
   <title><![CDATA[Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-02T08:27:57+08:00</updated>
+  <updated>2014-07-02T23:24:16+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -14,15 +14,173 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Codecademy JavaScript]]></title>
+    <link href="http://scootcho.github.io/blog/2014/07/02/codecademy-javascript/"/>
+    <updated>2014-07-02T22:38:09+08:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/02/codecademy-javascript</id>
+    <content type="html"><![CDATA[<p>4 hrs</p>
+
+<p>Knowing that JavaScript will be extremely useful in combination with Ruby on Rails. I Codecademy&rsquo;s <a href="http://www.codecademy.com/tracks/javascript" target="_blank">JavaScript Track</a> today. It was especially fun building the rock, paper and scissors game.</p>
+
+<p>Scottbot vs Computer, who will win!?</p>
+
+<!-- more -->
+
+
+
+
+<figure class='code'><figcaption><span>rock, paper scissors game</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">var</span> <span class="n">scottbotChoice</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s2">&quot;Do you choose rock, paper or scissors?&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">var</span> <span class="n">computerChoice</span> <span class="o">=</span> <span class="no">Math</span><span class="o">.</span><span class="n">random</span><span class="p">();</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="n">computerChoice</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">.</span><span class="mi">34</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'> <span class="n">computerChoice</span> <span class="o">=</span> <span class="s2">&quot;rock&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">computerChoice</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="o">.</span><span class="mi">67</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'> <span class="n">computerChoice</span> <span class="o">=</span> <span class="s2">&quot;paper&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'> <span class="n">computerChoice</span> <span class="o">=</span> <span class="s2">&quot;scissors&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span> <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Computer: &quot;</span> <span class="o">+</span> <span class="n">computerChoice</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">var</span> <span class="n">compare</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">choice1</span><span class="p">,</span> <span class="n">choice2</span><span class="p">){</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="n">choice1</span> <span class="o">===</span> <span class="n">choice2</span><span class="p">){</span>
+</span><span class='line'>        <span class="k">return</span> <span class="s2">&quot;The result is a tie!&quot;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="n">choice1</span> <span class="o">===</span> <span class="s2">&quot;rock&quot;</span><span class="p">){</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="n">choice2</span> <span class="o">===</span> <span class="s2">&quot;scissors&quot;</span><span class="p">){</span>
+</span><span class='line'>            <span class="k">return</span><span class="p">(</span><span class="s2">&quot;rock wins!&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">choice2</span> <span class="o">===</span> <span class="s2">&quot;paper&quot;</span><span class="p">){</span>
+</span><span class='line'>            <span class="k">return</span> <span class="s2">&quot;paper wins!&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="n">choice1</span> <span class="o">===</span> <span class="s2">&quot;paper&quot;</span><span class="p">){</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="n">choice2</span> <span class="o">===</span> <span class="s2">&quot;scissors&quot;</span><span class="p">){</span>
+</span><span class='line'>            <span class="k">return</span><span class="s2">&quot;scissors wins!&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">choice2</span> <span class="o">===</span> <span class="s2">&quot;scissors&quot;</span><span class="p">){</span>
+</span><span class='line'>            <span class="k">return</span> <span class="s2">&quot;scissors wins!&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="n">choice1</span> <span class="o">===</span> <span class="s2">&quot;scissors&quot;</span><span class="p">){</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="n">choice2</span> <span class="o">===</span> <span class="s2">&quot;rock&quot;</span><span class="p">){</span>
+</span><span class='line'>            <span class="k">return</span><span class="s2">&quot;rock wins!&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">choice2</span> <span class="o">===</span> <span class="s2">&quot;paper&quot;</span><span class="p">){</span>
+</span><span class='line'>            <span class="k">return</span> <span class="s2">&quot;scissors wins!&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">compare</span><span class="p">(</span><span class="n">scottbotChoice</span><span class="p">,</span> <span class="n">computerChoice</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Good Times Ahead!]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/01/good-times-ahead/"/>
     <updated>2014-07-01T18:29:51+08:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/01/good-times-ahead</id>
     <content type="html"><![CDATA[<p>Tomorrow, I will be starting the 10 week programming curriculumn at <a href="https://www.makeitwithcode.com/" target="_blank">MakeItWithCode</a>. I will document my learning process here to help myself clarify and understand some concepts. Oh yea, and for memorization too because I have a terrible, terrible memory.</p>
 
+<p>Here is the sneak peak of the <strong>course syllabus</strong>, which obtained from the site once you provide your email address.</p>
+
 <!--more-->
 
 
+
+
+<h2 style="text-align:center;">Course syllabus</h2>
+
+
+<p><strong>Lesson 1: Twitter API</strong></p>
+
+<p>This is all about getting you used to your development environment and working with other people&#8217;s code. By the end, you&#8217;ll be using Ruby to search Twitter and display results the Terminal.</p>
+
+
+<p><strong>Lesson 2: CSV &amp; Email</strong>
+Data is of limited use when it&rsquo;s stuck within the Terminal. In this lesson, you&rsquo;ll create a simple tool to email yourself an attachment containing the data from your Twitter search.</p>
+
+<p><strong>Lesson 3: Simple Web App</strong></p>
+
+<p>Building web apps is the reason many people start learning to code. To start with the basics, you&#8217;ll build a static web app with 3 pages using Twitter Bootstrap to add a professional layout.</p>
+
+
+<p><strong>Lesson 4: Dynamic Web App</strong></p>
+
+<p>Expanding on the previous lesson, this project makes your web app a bit more interactive. You&#8217;ll end up with a web app that searches Twitter for tweets about dogs and display them live.</p>
+
+
+<p><strong>Lesson 5: Web Scraper</strong></p>
+
+<p>APIs are awesome for slicing and dicing data from websites, but in practice many sites don&#8217;t offer one. So to extract the data from Reddit, you&#8217;re going to construct a simple little web scraper.</p>
+
+
+<p><strong>Lesson 6: ToDo List</strong></p>
+
+<p>This is your first introduction to databases. Building on your basic web app, you&#8217;ll build a ToDo list that you can add items to from the Terminal and view live in your web app.</p>
+
+
+<p><strong>Lesson 7: Useful ToDo List</strong></p>
+
+<p>Working from the ToDo List, you&#8217;ll learn a bit more about databases so you can update your list and remove items. You&#8217;ll be able to mark ToDo items as completed from within the web app.</p>
+
+
+<p><strong>Lesson 8: Dashboard</strong></p>
+
+<p>By this point you&#8217;ll have realised that using other people&#8217;s code makes work much easier. This lesson is the best example of that, as you&#8217;ll end up with an awesome dashboard.</p>
+
+
+<p><strong>Lesson 9: Dashboard Deployed!</strong></p>
+
+<p>You&#8217;ve got a bunch of cool things to show off, now you need to get them online! You&#8217;re going to tweak the dashboard with a custom widget, upload it to Github and deploy it to Heroku.</p>
+
+
+<p><strong>Lesson 10: Complete Website</strong></p>
+
+<p>One of the most valuable things about knowing how to code is the freedom to throw up simple websites with little time and no money. Whether for a personal portfolio or a client. In this final lesson, you&#8217;re going to take a Bootstrap template, convert it into a Sinatra application and deploy a real, working website.</p>
 
 ]]></content>
   </entry>

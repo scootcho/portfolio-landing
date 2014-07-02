@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: javascript | Assemblying Scottbot]]></title>
+  <link href="http://scootcho.github.io/blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://scootcho.github.io/"/>
+  <updated>2014-07-02T23:24:16+08:00</updated>
+  <id>http://scootcho.github.io/</id>
+  <author>
+    <name><![CDATA[Scott Yu]]></name>
+    <email><![CDATA[scott.tj.yu@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Codecademy JavaScript]]></title>
+    <link href="http://scootcho.github.io/blog/2014/07/02/codecademy-javascript/"/>
+    <updated>2014-07-02T22:38:09+08:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/02/codecademy-javascript</id>
+    <content type="html"><![CDATA[<p>4 hrs</p>
+
+<p>Knowing that JavaScript will be extremely useful in combination with Ruby on Rails. I Codecademy&rsquo;s <a href="http://www.codecademy.com/tracks/javascript" target="_blank">JavaScript Track</a> today. It was especially fun building the rock, paper and scissors game.</p>
+
+<p>Scottbot vs Computer, who will win!?</p>
+
+<!-- more -->
+
+
+<p>```ruby rock, paper scissors game</p>
+
+<p>var scottbotChoice = prompt(&ldquo;Do you choose rock, paper or scissors?&rdquo;);</p>
+
+<p>var computerChoice = Math.random();
+if (computerChoice &lt; 0.34) {
+ computerChoice = &ldquo;rock&rdquo;;
+} else if(computerChoice &lt;= 0.67) {
+ computerChoice = &ldquo;paper&rdquo;;
+} else {
+ computerChoice = &ldquo;scissors&rdquo;;
+} console.log(&ldquo;Computer: &rdquo; + computerChoice);</p>
+
+<p>var compare = function(choice1, choice2){</p>
+
+<pre><code>if(choice1 === choice2){
+    return "The result is a tie!"
+}
+if(choice1 === "rock"){
+    if(choice2 === "scissors"){
+        return("rock wins!");
+    }
+    else if (choice2 === "paper"){
+        return "paper wins!";
+    }
+}
+if(choice1 === "paper"){
+    if(choice2 === "scissors"){
+        return"scissors wins!";
+    }
+    else if (choice2 === "scissors"){
+        return "scissors wins!";
+    }
+}
+if(choice1 === "scissors"){
+    if(choice2 === "rock"){
+        return"rock wins!";
+    }
+    else if (choice2 === "paper"){
+        return "scissors wins!";
+    }
+}    
+</code></pre>
+
+<p>}</p>
+
+<p>compare(scottbotChoice, computerChoice)</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Javascript Range Slider]]></title>
+    <link href="http://scootcho.github.io/blog/2014/06/30/javascript-range-slider/"/>
+    <updated>2014-06-30T23:46:07+08:00</updated>
+    <id>http://scootcho.github.io/blog/2014/06/30/javascript-range-slider</id>
+    <content type="html"><![CDATA[<p>3.5 hrs</p>
+
+<p>I thought it&rsquo;s also important to sharpen some of my front-end skills as well so I chose the <a href="http://thecodeplayer.com/walkthrough/spicing-up-the-html5-range-slider-input?utm_source=TheCodePlayer&utm_campaign=5b4d9871a4-Direct_Messages10_1_2013&utm_medium=email&utm_term=0_9d9ac48e00-5b4d9871a4-89594157" target="_blank">HTML5 Range Slider</a> for practice.</p>
+
+<p><pre class="codepen" data-height="440" data-type="result" data-href="nKHfy" data-user="scootcho"><code> </code></pre>
+<script async src="http://codepen.io:/assets/embed/ei.js"></script></p>
+
+<p>I&rsquo;m sure you&rsquo;ve noticed the slider nob is a little messed up. I even went back and copied and pasted the code from the source but it didn&rsquo;t help. I think this might be a browser thing. As quoted in the <a href="http://thecodeplayer.com/walkthrough/spicing-up-the-html5-range-slider-input?utm_source=TheCodePlayer&utm_campaign=5b4d9871a4-Direct_Messages10_1_2013&utm_medium=email&utm_term=0_9d9ac48e00-5b4d9871a4-89594157" target="_blank">walkthrough</a> :</p>
+
+<p><blockquote><p>Note: This is a chrome only demo/walkthrough as it uses features which are currently not supported in other browsers.</p></blockquote></p>
+
+<!--more-->
+
+
+<p>If you have any idea how to fix this issue please let me know! I&rsquo;d love to know!</p>
+]]></content>
+  </entry>
+  
+</feed>
