@@ -9,7 +9,7 @@
 	<meta name="author" content="Scott Yu">
 
 	
-	<meta name="description" content="Codecademy JavaScript 4 hrs Knowing that JavaScript will be extremely useful in combination with Ruby on Rails. I Codecademy&rsquo;s JavaScript &hellip;">
+	<meta name="description" content="Codecademy JavaScript 4 hrs Knowing that JavaScript will be extremely useful in combination with Ruby on Rails. I started Codecademy&rsquo;s &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -51,7 +51,7 @@
 <br>
 <section class="aboutme">
   <p>
-    I'm Scott and this is where I share my programming learning experience and other things that interests me.
+    I'm Scott and this is where I share my programming learning experience and other things of interest.
   </p>
 </section>
 <br>
@@ -102,7 +102,7 @@
 	<h1 class="title" itemprop="name">Codecademy JavaScript</h1>
 	<div class="entry-content" itemprop="articleBody"><p>4 hrs</p>
 
-<p>Knowing that JavaScript will be extremely useful in combination with Ruby on Rails. I Codecademy&rsquo;s <a href="http://www.codecademy.com/tracks/javascript" target="_blank">JavaScript Track</a> today. It was especially fun building the rock, paper and scissors game.</p>
+<p>Knowing that JavaScript will be extremely useful in combination with Ruby on Rails. I started Codecademy&rsquo;s <a href="http://www.codecademy.com/tracks/javascript" target="_blank">JavaScript Track</a> today. It was especially fun building the rock-paper-scissors game.</p>
 
 <p>Scottbot vs Computer, who will win!?</p>
 
@@ -111,7 +111,7 @@
 
 
 
-<figure class='code'><figcaption><span>rock, paper scissors game</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>rock-paper-scissors</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -153,48 +153,61 @@
 <span class='line-number'>40</span>
 <span class='line-number'>41</span>
 <span class='line-number'>42</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">var</span> <span class="n">scottbotChoice</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s2">&quot;Do you choose rock, paper or scissors?&quot;</span><span class="p">);</span>
+<span class='line-number'>43</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">scottbotChoice</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Do you choose rock, paper or scissors?&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Scottbot: &quot;</span> <span class="o">+</span> <span class="nx">scottbotChoice</span><span class="p">);</span>
 </span><span class='line'>
-</span><span class='line'><span class="n">var</span> <span class="n">computerChoice</span> <span class="o">=</span> <span class="no">Math</span><span class="o">.</span><span class="n">random</span><span class="p">();</span>
-</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="n">computerChoice</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">.</span><span class="mi">34</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'> <span class="n">computerChoice</span> <span class="o">=</span> <span class="s2">&quot;rock&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">computerChoice</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="o">.</span><span class="mi">67</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'> <span class="n">computerChoice</span> <span class="o">=</span> <span class="s2">&quot;paper&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">computerChoice</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">();</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">computerChoice</span> <span class="o">&lt;</span> <span class="mf">0.34</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'> <span class="nx">computerChoice</span> <span class="o">=</span> <span class="s2">&quot;rock&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">computerChoice</span> <span class="o">&lt;=</span> <span class="mf">0.67</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'> <span class="nx">computerChoice</span> <span class="o">=</span> <span class="s2">&quot;paper&quot;</span><span class="p">;</span>
 </span><span class='line'><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'> <span class="n">computerChoice</span> <span class="o">=</span> <span class="s2">&quot;scissors&quot;</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span> <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Computer: &quot;</span> <span class="o">+</span> <span class="n">computerChoice</span><span class="p">);</span>
+</span><span class='line'> <span class="nx">computerChoice</span> <span class="o">=</span> <span class="s2">&quot;scissors&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Computer: &quot;</span> <span class="o">+</span> <span class="nx">computerChoice</span><span class="p">);</span>
 </span><span class='line'>
-</span><span class='line'><span class="n">var</span> <span class="n">compare</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">choice1</span><span class="p">,</span> <span class="n">choice2</span><span class="p">){</span>
-</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="n">choice1</span> <span class="o">===</span> <span class="n">choice2</span><span class="p">){</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">compare</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">choice1</span><span class="p">,</span> <span class="nx">choice2</span><span class="p">){</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="nx">choice1</span> <span class="o">===</span> <span class="nx">choice2</span><span class="p">){</span>
 </span><span class='line'>        <span class="k">return</span> <span class="s2">&quot;The result is a tie!&quot;</span>
 </span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="n">choice1</span> <span class="o">===</span> <span class="s2">&quot;rock&quot;</span><span class="p">){</span>
-</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="n">choice2</span> <span class="o">===</span> <span class="s2">&quot;scissors&quot;</span><span class="p">){</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="nx">choice1</span> <span class="o">===</span> <span class="s2">&quot;rock&quot;</span><span class="p">){</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">choice2</span> <span class="o">===</span> <span class="s2">&quot;scissors&quot;</span><span class="p">){</span>
 </span><span class='line'>            <span class="k">return</span><span class="p">(</span><span class="s2">&quot;rock wins!&quot;</span><span class="p">);</span>
 </span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">choice2</span> <span class="o">===</span> <span class="s2">&quot;paper&quot;</span><span class="p">){</span>
+</span><span class='line'>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">choice2</span> <span class="o">===</span> <span class="s2">&quot;paper&quot;</span><span class="p">){</span>
 </span><span class='line'>            <span class="k">return</span> <span class="s2">&quot;paper wins!&quot;</span><span class="p">;</span>
 </span><span class='line'>        <span class="p">}</span>
 </span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="n">choice1</span> <span class="o">===</span> <span class="s2">&quot;paper&quot;</span><span class="p">){</span>
-</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="n">choice2</span> <span class="o">===</span> <span class="s2">&quot;scissors&quot;</span><span class="p">){</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="nx">choice1</span> <span class="o">===</span> <span class="s2">&quot;paper&quot;</span><span class="p">){</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">choice2</span> <span class="o">===</span> <span class="s2">&quot;scissors&quot;</span><span class="p">){</span>
 </span><span class='line'>            <span class="k">return</span><span class="s2">&quot;scissors wins!&quot;</span><span class="p">;</span>
 </span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">choice2</span> <span class="o">===</span> <span class="s2">&quot;scissors&quot;</span><span class="p">){</span>
+</span><span class='line'>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">choice2</span> <span class="o">===</span> <span class="s2">&quot;scissors&quot;</span><span class="p">){</span>
 </span><span class='line'>            <span class="k">return</span> <span class="s2">&quot;scissors wins!&quot;</span><span class="p">;</span>
 </span><span class='line'>        <span class="p">}</span>
 </span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="n">choice1</span> <span class="o">===</span> <span class="s2">&quot;scissors&quot;</span><span class="p">){</span>
-</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="n">choice2</span> <span class="o">===</span> <span class="s2">&quot;rock&quot;</span><span class="p">){</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="nx">choice1</span> <span class="o">===</span> <span class="s2">&quot;scissors&quot;</span><span class="p">){</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">choice2</span> <span class="o">===</span> <span class="s2">&quot;rock&quot;</span><span class="p">){</span>
 </span><span class='line'>            <span class="k">return</span><span class="s2">&quot;rock wins!&quot;</span><span class="p">;</span>
 </span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">choice2</span> <span class="o">===</span> <span class="s2">&quot;paper&quot;</span><span class="p">){</span>
+</span><span class='line'>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">choice2</span> <span class="o">===</span> <span class="s2">&quot;paper&quot;</span><span class="p">){</span>
 </span><span class='line'>            <span class="k">return</span> <span class="s2">&quot;scissors wins!&quot;</span><span class="p">;</span>
 </span><span class='line'>        <span class="p">}</span>
 </span><span class='line'>    <span class="p">}</span>
 </span><span class='line'><span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'><span class="n">compare</span><span class="p">(</span><span class="n">scottbotChoice</span><span class="p">,</span> <span class="n">computerChoice</span><span class="p">)</span>
+</span><span class='line'><span class="nx">compare</span><span class="p">(</span><span class="nx">scottbotChoice</span><span class="p">,</span> <span class="nx">computerChoice</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>result</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">Scottbot</span><span class="o">:</span> <span class="nx">rock</span>
+</span><span class='line'><span class="nx">Computer</span><span class="o">:</span> <span class="nx">scissors</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="s1">&#39;rock wins!&#39;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 </div>

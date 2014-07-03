@@ -4,7 +4,7 @@
   <title><![CDATA[Category: time | Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/blog/categories/time/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-02T23:24:16+08:00</updated>
+  <updated>2014-07-03T11:15:37+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -20,16 +20,17 @@
     <id>http://scootcho.github.io/blog/2014/07/02/codecademy-javascript</id>
     <content type="html"><![CDATA[<p>4 hrs</p>
 
-<p>Knowing that JavaScript will be extremely useful in combination with Ruby on Rails. I Codecademy&rsquo;s <a href="http://www.codecademy.com/tracks/javascript" target="_blank">JavaScript Track</a> today. It was especially fun building the rock, paper and scissors game.</p>
+<p>Knowing that JavaScript will be extremely useful in combination with Ruby on Rails. I started Codecademy&rsquo;s <a href="http://www.codecademy.com/tracks/javascript" target="_blank">JavaScript Track</a> today. It was especially fun building the rock-paper-scissors game.</p>
 
 <p>Scottbot vs Computer, who will win!?</p>
 
 <!-- more -->
 
 
-<p>```ruby rock, paper scissors game</p>
+<p>```javascript rock-paper-scissors</p>
 
-<p>var scottbotChoice = prompt(&ldquo;Do you choose rock, paper or scissors?&rdquo;);</p>
+<p>var scottbotChoice = prompt(&ldquo;Do you choose rock, paper or scissors?&rdquo;);
+console.log(&ldquo;Scottbot: &rdquo; + scottbotChoice);</p>
 
 <p>var computerChoice = Math.random();
 if (computerChoice &lt; 0.34) {
@@ -76,6 +77,12 @@ if(choice1 === "scissors"){
 <p>compare(scottbotChoice, computerChoice)</p>
 
 <p>```</p>
+
+<p><code>javascript result
+Scottbot: rock
+Computer: scissors
+=&gt; 'rock wins!'
+</code></p>
 ]]></content>
   </entry>
   
