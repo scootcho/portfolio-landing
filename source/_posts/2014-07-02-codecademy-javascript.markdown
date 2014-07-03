@@ -8,15 +8,16 @@ categories: [javascript, codecademy, time]
 
 4 hrs
 
-Knowing that JavaScript will be extremely useful in combination with Ruby on Rails. I Codecademy's <a href="http://www.codecademy.com/tracks/javascript" target="_blank">JavaScript Track</a> today. It was especially fun building the rock, paper and scissors game.
+Knowing that JavaScript will be extremely useful in combination with Ruby on Rails. I started Codecademy's <a href="http://www.codecademy.com/tracks/javascript" target="_blank">JavaScript Track</a> today. It was especially fun building the rock-paper-scissors game.
 
 Scottbot vs Computer, who will win!?
 
 <!-- more -->
 
-```ruby rock, paper scissors game
+```javascript rock-paper-scissors
 
 var scottbotChoice = prompt("Do you choose rock, paper or scissors?");
+console.log("Scottbot: " + scottbotChoice);
 
 var computerChoice = Math.random();
 if (computerChoice < 0.34) {
@@ -59,4 +60,10 @@ var compare = function(choice1, choice2){
 
 compare(scottbotChoice, computerChoice)
 
+```
+
+```javascript result
+Scottbot: rock
+Computer: scissors
+=> 'rock wins!'
 ```
