@@ -2,7 +2,7 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://scootcho.github.io/blog/2014/06/13/back-to-the-bay/</loc>
-        <lastmod>2014-07-01T21:32:14+08:00</lastmod>
+        <lastmod>2014-07-11T11:03:13+08:00</lastmod>
     </url>
     <url>
         <loc>http://scootcho.github.io/blog/2014/06/28/some-ruby-review/</loc>
@@ -18,11 +18,15 @@
     </url>
     <url>
         <loc>http://scootcho.github.io/blog/2014/07/01/good-times-ahead/</loc>
-        <lastmod>2014-07-02T23:22:19+08:00</lastmod>
+        <lastmod>2014-07-11T10:39:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://scootcho.github.io/blog/2014/07/02/codecademy-javascript/</loc>
         <lastmod>2014-07-03T11:13:21+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://scootcho.github.io/blog/2014/07/03/lesson-1-twitter-api/</loc>
+        <lastmod>2014-07-11T12:41:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://scootcho.github.io/blog/categories/</loc>
@@ -30,15 +34,15 @@
     </url>
     <url>
         <loc>http://scootcho.github.io/blog/archives/</loc>
-        <lastmod>2014-07-03T11:13:21+08:00</lastmod>
+        <lastmod>2014-07-11T12:41:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://scootcho.github.io/blog/about/</loc>
-        <lastmod>2014-07-03T11:13:21+08:00</lastmod>
+        <lastmod>2014-07-11T12:41:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://scootcho.github.io/</loc>
-        <lastmod>2014-07-03T11:13:21+08:00</lastmod>
+        <lastmod>2014-07-11T12:41:52+08:00</lastmod>
     </url>
     <url>
         <loc>http://scootcho.github.io/robots.txt</loc>
@@ -46,6 +50,6 @@
     </url>
     <url>
         <loc>http://scootcho.github.io/posts/</loc>
-        <lastmod>2014-07-03T11:13:21+08:00</lastmod>
+        <lastmod>2014-07-11T12:41:52+08:00</lastmod>
     </url>
 </urlset>

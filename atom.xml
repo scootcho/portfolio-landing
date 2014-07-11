@@ -4,7 +4,7 @@
   <title><![CDATA[Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-03T11:15:37+08:00</updated>
+  <updated>2014-07-11T12:42:19+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -12,6 +12,115 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Lesson 1: Twitter API]]></title>
+    <link href="http://scootcho.github.io/blog/2014/07/03/lesson-1-twitter-api/"/>
+    <updated>2014-07-03T10:38:17+08:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/03/lesson-1-twitter-api</id>
+    <content type="html"><![CDATA[<p>2 hrs</p>
+
+<p>Today I received the first lesson from the <a href="https://www.makeitwithcode.com/" target="_blank">MakeItWithCode</a> team. The lesson briefly covers some basics for beginners such as linux commands and run <code>bundle</code> to install Ruby gems. But the emphasis of this course is to build things so it dives directly into the <a href="https://github.com/sferik/twitter" target="_blank">Twitter Ruby Gem</a>, which I like.</p>
+
+<p>You&rsquo;ll need to signup for a Twitter <a href="https://dev.twitter.com/apps/new" target="_blank">Twitter Developer Account</a> to access the API. Once that&rsquo;s done, use the keys from the Twitter Developer Account in your code.</p>
+
+<!--more-->
+
+
+<p>The first task is to get the first weet from a specified user, in this example I used my own twitter handle, <code>scootcho</code>:</p>
+
+<figure class='code'><figcaption><span>gets_tweets.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;twitter&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># Authentication details from twitter, your starting</span>
+</span><span class='line'><span class="c1"># point is here: https://dev.twitter.com/apps/new</span>
+</span><span class='line'><span class="n">client</span> <span class="o">=</span> <span class="ss">Twitter</span><span class="p">:</span><span class="ss">:REST</span><span class="o">::</span><span class="no">Client</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">consumer_key</span>    <span class="o">=</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxx&quot;</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxx&quot;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># Get the first tweet of the specified user</span>
+</span><span class='line'><span class="nb">puts</span> <span class="n">client</span><span class="o">.</span><span class="n">user_timeline</span><span class="p">(</span><span class="s2">&quot;scootcho&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="o">.</span><span class="n">text</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next, print out the tweets to screen:</p>
+
+<figure class='code'><figcaption><span>gets_tweets.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;twitter&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">client</span> <span class="o">=</span> <span class="ss">Twitter</span><span class="p">:</span><span class="ss">:REST</span><span class="o">::</span><span class="no">Client</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">consumer_key</span>    <span class="o">=</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxx&quot;</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxx&quot;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># twitter handle to get tweets for</span>
+</span><span class='line'><span class="n">the_twitter_handle</span> <span class="o">=</span> <span class="s2">&quot;scootcho&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># go through each tweet and print out the text</span>
+</span><span class='line'><span class="n">client</span><span class="o">.</span><span class="n">user_timeline</span><span class="p">(</span><span class="n">the_twitter_handle</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">tweet</span><span class="o">|</span>
+</span><span class='line'>    <span class="nb">puts</span> <span class="n">tweet</span><span class="o">.</span><span class="n">text</span>
+</span><span class='line'><span class="k">end</span><span class="p">;</span> <span class="kp">nil</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Pick a Twitter Handle and displays the 10 most recent tweets mentioning &ldquo;learn to code&rdquo;:</p>
+
+<figure class='code'><figcaption><span>gets_tweets.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;twitter&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">client</span> <span class="o">=</span> <span class="ss">Twitter</span><span class="p">:</span><span class="ss">:REST</span><span class="o">::</span><span class="no">Client</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">consumer_key</span>    <span class="o">=</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxx&quot;</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxx&quot;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="n">client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;learn to code&quot;</span><span class="p">,</span> <span class="ss">:result_type</span> <span class="o">=&gt;</span> <span class="s2">&quot;recent&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">tweet</span><span class="o">|</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="n">tweet</span><span class="o">.</span><span class="n">text</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>There are a couple more things I would like to play with the Twitter API based on suggestions:</p>
+
+<ul>
+<li>Make the script tweet for you</li>
+<li>Try and conduct some more advanced searches using the Twitter query syntax explained <a href="https://dev.twitter.com/docs/using-search" target="_blank">here</a>:</li>
+</ul>
+
+
+<p>I will follow up with the progress in the future.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Codecademy JavaScript]]></title>
@@ -478,16 +587,16 @@ Data is of limited use when it&rsquo;s stuck within the Terminal. In this lesson
     <link href="http://scootcho.github.io/blog/2014/06/13/back-to-the-bay/"/>
     <updated>2014-06-13T08:15:48+08:00</updated>
     <id>http://scootcho.github.io/blog/2014/06/13/back-to-the-bay</id>
-    <content type="html"><![CDATA[<p>I almost forgot how fresh and crisp the air is in San Francisco! After 9 months in South East Asia, I can&rsquo;t say I miss the humidity one bit.</p>
+    <content type="html"><![CDATA[<p>I almost forgot how fresh and crisp the air is in San Francisco! After spending 9 months with the team in South East Asia, I can&rsquo;t say I miss the humidity one bit.</p>
 
-<p>While working at the startup, I&rsquo;ve done various things from business development to mopping the floor since we have a small team. But one of the things I enjoyed the most was the chance to contribute to our web application.</p>
+<p>Since we&rsquo;re a small team, I&rsquo;m doing various things ranging from business development to cleaning the toilet (no, literally). But one of the things I enjoy the most is contributing to our web application!</p>
 
 <!--more-->
 
 
-<p>Although my background is in Finance, I&rsquo;ve always had an interest in design and I was learning some graphic design on my own. When I got the chance to design the responsive email template, I was stoked! Although, the code is nothing worth mentioning, and the design was pieced together from different sources, it was still empowering to see the work going out to our customers in the real world.</p>
+<p>Although my background is in Finance, I&rsquo;ve always had an interest in tech and I was learning some front-end things on my own. When I got the chance to design the responsive email template, I was stoked! Although, the code is nothing worth mentioning, and the design was pieced together from different sources, it was still empowering to see the work going out to our customers in the real world.</p>
 
-<p>I was hooked! Since then, I&rsquo;ve been taking oneline courses on my spare time. My goal is to become better so I can help build cool things. Currently, I&rsquo;m learning the Ruby language and the Rails framework. I will document my learning process here so one day I can look back and say to myself, &ldquo;hey, you&rsquo;ve come a long way!&rdquo;</p>
+<p>I was hooked! Since then, I&rsquo;ve been taking oneline courses on my spare time. My goal is to become a better coder so I can help build cool things. Currently, I&rsquo;m learning the Ruby language, Rails framework, and Javascript. I will document my learning process here so one day I can look back and say to myself, &ldquo;hey, you&rsquo;ve come a long way!&rdquo;</p>
 ]]></content>
   </entry>
   
