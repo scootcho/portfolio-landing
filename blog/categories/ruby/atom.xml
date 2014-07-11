@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-11T12:42:19+08:00</updated>
+  <updated>2014-07-11T16:17:17+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -20,14 +20,14 @@
     <id>http://scootcho.github.io/blog/2014/07/03/lesson-1-twitter-api</id>
     <content type="html"><![CDATA[<p>2 hrs</p>
 
-<p>Today I received the first lesson from the <a href="https://www.makeitwithcode.com/" target="_blank">MakeItWithCode</a> team. The lesson briefly covers some basics for beginners such as linux commands and run <code>bundle</code> to install Ruby gems. But the emphasis of this course is to build things so it dives directly into the <a href="https://github.com/sferik/twitter" target="_blank">Twitter Ruby Gem</a>, which I like.</p>
+<p>Today I received the first lesson from the <a href="https://www.makeitwithcode.com/" target="_blank">MakeItWithCode</a> team. The lesson briefly covers some basics for beginners such as linux commands and run <code>bundle</code> to install Ruby gems. But the emphasis of this course is to build things so it dives striaght into the <a href="https://github.com/sferik/twitter" target="_blank">Twitter Ruby Gem</a>, which I like.</p>
 
-<p>You&rsquo;ll need to signup for a Twitter <a href="https://dev.twitter.com/apps/new" target="_blank">Twitter Developer Account</a> to access the API. Once that&rsquo;s done, use the keys from the Twitter Developer Account in your code.</p>
+<p>You&rsquo;ll need to signup for a <a href="https://dev.twitter.com/apps/new" target="_blank">Twitter Developer Account</a> to access the API. Once that&rsquo;s done, use the keys from the Twitter Developer Account in your code.</p>
 
 <!--more-->
 
 
-<p>The first task is to get the first weet from a specified user, in this example I used my own twitter handle, <code>scootcho</code>:</p>
+<p>The first task is to get the first weet from a specified user, in this example, I used my own twitter handle, <code>scootcho</code>:</p>
 
 <p>```ruby gets_tweets.rb
 require &lsquo;twitter&rsquo;</p>
