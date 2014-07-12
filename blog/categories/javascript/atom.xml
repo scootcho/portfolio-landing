@@ -4,7 +4,7 @@
   <title><![CDATA[Category: javascript | Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-11T16:17:17+08:00</updated>
+  <updated>2014-07-12T22:43:12+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Codecademy JavaScript Continue]]></title>
+    <link href="http://scootcho.github.io/blog/2014/07/08/codecademy-javascript-continue/"/>
+    <updated>2014-07-08T22:39:52+08:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/08/codecademy-javascript-continue</id>
+    <content type="html"><![CDATA[<p>3.5 hrs</p>
+
+<p>I continued the Codecademy&rsquo;s <a href="http://www.codecademy.com/tracks/javascript" target="_blank">JavaScript Track</a> today. My goal is to wrap up this week so I can build more front-end mini projects.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Codecademy JavaScript]]></title>
