@@ -4,7 +4,7 @@
   <title><![CDATA[Category: code | Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/blog/categories/code/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-12T22:43:12+08:00</updated>
+  <updated>2014-07-13T12:22:13+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -20,7 +20,19 @@
     <id>http://scootcho.github.io/blog/2014/07/08/codecademy-javascript-continue</id>
     <content type="html"><![CDATA[<p>3.5 hrs</p>
 
-<p>I continued the Codecademy&rsquo;s <a href="http://www.codecademy.com/tracks/javascript" target="_blank">JavaScript Track</a> today. My goal is to wrap up this week so I can build more front-end mini projects.</p>
+<p>I continued the Codecademy&rsquo;s <a href="http://www.codecademy.com/tracks/javascript">JavaScript Track</a> today. My goal is to wrap up this week so I can build more front-end mini projects.</p>
+
+<p>Although I did a couple of basic JavaScript projects earlier (<a href="https://github.com/scootcho/the_odin_project/tree/master/sketchpad">Sketchpad</a> &amp; <a href="https://github.com/scootcho/the_odin_project/tree/master/javascript">Project Euler</a>), but I felt the need for more practice with my JavaScript &amp; jQuery when I was working on the <a href="/blog/2014/06/30/javascript-range-slider/">range slider</a> last week.</p>
+
+<p>Good thing is, I have already scoped out a couple of cool mini projects to build:</p>
+
+<p><pre class="codepen" data-height="440" data-type="result" data-href="IHbvh" data-user="jackrugile"><code> </code></pre>
+<script async src="http://codepen.io:/assets/embed/ei.js"></script></p>
+
+<p><pre class="codepen" data-height="440" data-type="result" data-href="sjcoa" data-user="zerospree"><code> </code></pre>
+<script async src="http://codepen.io:/assets/embed/ei.js"></script></p>
+
+<p>I&rsquo;m looking forward to make some cool stuff. If you happen to see anything cool to build, please let me know! Thanks!</p>
 ]]></content>
   </entry>
   
