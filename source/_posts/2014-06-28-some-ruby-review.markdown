@@ -8,7 +8,7 @@ categories: [programming, ruby, review, time]
 
 2.5 hrs
 
-I have signed up for a new online Ruby curriculum which will start next week. We'll be building 10 projects in 10 weeks. I figure I'd review some materials from Codecademy's <a href="http://www.codecademy.com/tracks/ruby" target="_blank">Ruby Track</a> I've completed <a href="http://www.codecademy.com/users/scottyu/achievements" target="_blank">last month</a>
+I have signed up for a new online Ruby curriculum which will start next week. We'll be building 10 projects in 10 weeks. I figure I'd review some materials from Codecademy's [Ruby Track][rubytrack] I've completed [last month][badges].
 
 
 I spent about 2.5 hours review part of the material and will continue the review tomorrow.
@@ -54,3 +54,6 @@ hash
 hash[5]
 => "notnil"
 ```
+
+[rubytrack]: http://www.codecademy.com/tracks/ruby
+[badges]: http://www.codecademy.com/users/scottyu/achievements

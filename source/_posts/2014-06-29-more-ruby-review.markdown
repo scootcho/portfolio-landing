@@ -8,7 +8,7 @@ categories: [programming, ruby, review, time]
 
 5 hrs
 
-Finished reviewing Codecademy's <a href="http://www.codecademy.com/tracks/ruby" target="_blank">Ruby Track</a> today.
+Finished reviewing Codecademy's [Ruby Track][rubytrack] today.
 
 Here are some more snippets:
 
@@ -86,3 +86,5 @@ else
 	 puts "Sorry, I didn't understand you."
 end
 ```
+
+[rubytrack]: http://www.codecademy.com/tracks/ruby

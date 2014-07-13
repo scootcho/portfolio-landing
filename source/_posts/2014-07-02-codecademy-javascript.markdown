@@ -8,7 +8,7 @@ categories: [javascript, codecademy, time]
 
 4 hrs
 
-Knowing that JavaScript will be extremely useful in combination with Ruby on Rails. I started Codecademy's <a href="http://www.codecademy.com/tracks/javascript" target="_blank">JavaScript Track</a> today. It was especially fun building the rock-paper-scissors game.
+Knowing that JavaScript will be extremely useful in combination with Ruby on Rails. I started Codecademy's [JavaScript Track][jstrack] today. It was especially fun building the rock-paper-scissors game.
 
 Scottbot vs Computer, who will win!?
 
@@ -67,3 +67,5 @@ Scottbot: rock
 Computer: scissors
 => 'rock wins!'
 ```
+
+[jstrack]: http://www.codecademy.com/tracks/javascript

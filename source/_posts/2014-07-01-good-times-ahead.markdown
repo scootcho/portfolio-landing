@@ -6,7 +6,7 @@ comments: true
 categories: [programming, ruby, makeitwithcode]
 ---
 
-Tomorrow, I will be starting the 10 week programming curriculumn at <a href="https://www.makeitwithcode.com/" target="_blank">MakeItWithCode</a>. I will document my learning process here to help myself clarify and understand some concepts. Oh yea, and for memorization too because I have a terrible, terrible memory.
+Tomorrow, I will be starting the 10 week programming curriculumn at [MakeItWithCode][miwc]. I will document my learning process here to help myself clarify and understand some concepts. Oh yea, and for memorization too because I have a terrible, terrible memory.
 
 Here is the sneak peak of the <strong>course syllabus</strong>, which obtained from the site once you provide your email address.
 
@@ -52,3 +52,5 @@ Data is of limited use when it's stuck within the Terminal. In this lesson, you'
 
 <strong>Lesson 10: Complete Website</strong>
 <p>One of the most valuable things about knowing how to code is the freedom to throw up simple websites with little time and no money. Whether for a personal portfolio or a client. In this final lesson, you're going to take a Bootstrap template, convert it into a Sinatra application and deploy a real, working website.</p>
+
+[miwc]: https://www.makeitwithcode.com

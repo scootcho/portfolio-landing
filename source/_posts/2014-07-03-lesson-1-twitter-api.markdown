@@ -8,10 +8,10 @@ categories: [programming, ruby, makeitwithcode, time]
 
 2 hrs
 
-Today I received the first lesson from the <a href="https://www.makeitwithcode.com/" target="_blank">MakeItWithCode</a> team. The lesson briefly covers some basics for beginners such as linux commands and run `bundle` to install Ruby gems. But the emphasis of this course is to build things so it dives striaght into the <a href="https://github.com/sferik/twitter" target="_blank">Twitter Ruby Gem</a>, which I like.
+Today I received the first lesson from the [MakeItWithCode][miwc] team. The lesson briefly covers some basics for beginners such as linux commands and run `bundle` to install Ruby gems. But the emphasis of this course is to build things so it dives striaght into the [Twitter Ruby Gem][twgem], which I like.
 
 
-You'll need to signup for a <a href="https://dev.twitter.com/apps/new" target="_blank">Twitter Developer Account</a> to access the API. Once that's done, use the keys from the Twitter Developer Account in your code.  
+You'll need to signup for a [witter Developer Account][twdev] to access the API. Once that's done, use the keys from the Twitter Developer Account in your code.  
 
 <!--more-->
 
@@ -74,3 +74,8 @@ There are a couple more things I would like to play with the Twitter API based o
 * Try and conduct some more advanced searches using the Twitter query syntax explained <a href="https://dev.twitter.com/docs/using-search" target="_blank">here</a>:
 
 I will follow up with the progress in the future.
+
+
+[miwc]: https://www.makeitwithcode.com
+[twgem]: https://github.com/sferik/twitter
+[twdev]: https://dev.twitter.com/apps/new
