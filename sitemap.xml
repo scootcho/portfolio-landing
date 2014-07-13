@@ -6,11 +6,11 @@
     </url>
     <url>
         <loc>http://scootcho.github.io/blog/2014/06/28/some-ruby-review/</loc>
-        <lastmod>2014-07-02T22:59:27+08:00</lastmod>
+        <lastmod>2014-07-13T12:28:06+08:00</lastmod>
     </url>
     <url>
         <loc>http://scootcho.github.io/blog/2014/06/29/more-ruby-review/</loc>
-        <lastmod>2014-07-02T08:11:16+08:00</lastmod>
+        <lastmod>2014-07-13T12:28:38+08:00</lastmod>
     </url>
     <url>
         <loc>http://scootcho.github.io/blog/2014/06/30/javascript-range-slider/</loc>
@@ -18,23 +18,27 @@
     </url>
     <url>
         <loc>http://scootcho.github.io/blog/2014/07/01/good-times-ahead/</loc>
-        <lastmod>2014-07-11T10:39:29+08:00</lastmod>
+        <lastmod>2014-07-13T12:30:45+08:00</lastmod>
     </url>
     <url>
         <loc>http://scootcho.github.io/blog/2014/07/02/codecademy-javascript/</loc>
-        <lastmod>2014-07-03T11:13:21+08:00</lastmod>
+        <lastmod>2014-07-13T12:26:09+08:00</lastmod>
     </url>
     <url>
         <loc>http://scootcho.github.io/blog/2014/07/03/lesson-1-twitter-api/</loc>
-        <lastmod>2014-07-11T15:48:20+08:00</lastmod>
+        <lastmod>2014-07-13T12:33:06+08:00</lastmod>
     </url>
     <url>
         <loc>http://scootcho.github.io/blog/2014/07/04/open-source-cloud-and-desktop-ide/</loc>
-        <lastmod>2014-07-11T16:16:40+08:00</lastmod>
+        <lastmod>2014-07-13T12:33:50+08:00</lastmod>
     </url>
     <url>
         <loc>http://scootcho.github.io/blog/2014/07/08/codecademy-javascript-continue/</loc>
         <lastmod>2014-07-13T12:23:07+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://scootcho.github.io/blog/2014/07/09/taiwan-startup-meetup/</loc>
+        <lastmod>2014-07-13T17:57:35+08:00</lastmod>
     </url>
     <url>
         <loc>http://scootcho.github.io/blog/categories/</loc>
@@ -42,15 +46,15 @@
     </url>
     <url>
         <loc>http://scootcho.github.io/blog/archives/</loc>
-        <lastmod>2014-07-13T12:24:20+08:00</lastmod>
+        <lastmod>2014-07-13T17:57:35+08:00</lastmod>
     </url>
     <url>
         <loc>http://scootcho.github.io/blog/about/</loc>
-        <lastmod>2014-07-13T12:24:20+08:00</lastmod>
+        <lastmod>2014-07-13T17:57:35+08:00</lastmod>
     </url>
     <url>
         <loc>http://scootcho.github.io/</loc>
-        <lastmod>2014-07-13T12:24:20+08:00</lastmod>
+        <lastmod>2014-07-13T17:57:35+08:00</lastmod>
     </url>
     <url>
         <loc>http://scootcho.github.io/robots.txt</loc>
@@ -58,6 +62,6 @@
     </url>
     <url>
         <loc>http://scootcho.github.io/posts/</loc>
-        <lastmod>2014-07-13T12:24:20+08:00</lastmod>
+        <lastmod>2014-07-13T17:57:35+08:00</lastmod>
     </url>
 </urlset>

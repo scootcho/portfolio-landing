@@ -4,7 +4,7 @@
   <title><![CDATA[Category: time | Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/blog/categories/time/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-13T12:24:31+08:00</updated>
+  <updated>2014-07-13T17:58:02+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Taiwan Startup Meetup]]></title>
+    <link href="http://scootcho.github.io/blog/2014/07/09/taiwan-startup-meetup/"/>
+    <updated>2014-07-09T12:49:46+08:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/09/taiwan-startup-meetup</id>
+    <content type="html"><![CDATA[<p>1.5 hrs</p>
+
+<p>I didn&rsquo;t get to code too much today as I went to attend a <a href="http://www.meetup.com/taiwan-startup/events/192480802/">meetup event</a> in Taipei, hosted by <a href="http://iiinnolearn.weebly.com/">IIINNO</a>. There were handfull of pitches and one of them was <a href="http://between.us/en/">Between</a>, an app that focuses on sharing and commucation between couples. Between started in Korea and they have just raised $3M for Series A earlier this year. They&rsquo;re already in Japan and now expanding to Taiawn and a friend of mine is on the Taiwan team.</p>
+
+<p><img class="center" src="/images/between.jpg"></p>
+
+<!--more-->
+
+
+<p><img class="center" src="/images/twstartup.jpg"></p>
+
+<p>I chatted up with some startup peeps including one of the guys from <a href="http://www.techinasia.com/taiwan-sentri-beasted-kickstarter-campaign-smart-home-internet-of-things-taiwan-startup/">Sentri</a>, a smart home security hardware designed for control and visibility of your home.</p>
+
+<p>My first impression of Taiwan&rsquo;s startups is really positive. It&rsquo;s a tight-knit environment that feels like a family. It&rsquo;s somewhat similar to the startup scene in the Philippines, where people are just open minded to share experiences and help one another.</p>
+
+<p>Cheers to all of those who are pursuing their passions and riding them emotional rollercoasters! =)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Codecademy JavaScript Continue]]></title>
@@ -46,9 +70,9 @@
     <id>http://scootcho.github.io/blog/2014/07/03/lesson-1-twitter-api</id>
     <content type="html"><![CDATA[<p>2 hrs</p>
 
-<p>Today I received the first lesson from the <a href="https://www.makeitwithcode.com/" target="_blank">MakeItWithCode</a> team. The lesson briefly covers some basics for beginners such as linux commands and run <code>bundle</code> to install Ruby gems. But the emphasis of this course is to build things so it dives striaght into the <a href="https://github.com/sferik/twitter" target="_blank">Twitter Ruby Gem</a>, which I like.</p>
+<p>Today I received the first lesson from the <a href="https://www.makeitwithcode.com">MakeItWithCode</a> team. The lesson briefly covers some basics for beginners such as linux commands and run <code>bundle</code> to install Ruby gems. But the emphasis of this course is to build things so it dives striaght into the <a href="https://github.com/sferik/twitter">Twitter Ruby Gem</a>, which I like.</p>
 
-<p>You&rsquo;ll need to signup for a <a href="https://dev.twitter.com/apps/new" target="_blank">Twitter Developer Account</a> to access the API. Once that&rsquo;s done, use the keys from the Twitter Developer Account in your code.</p>
+<p>You&rsquo;ll need to signup for a <a href="https://dev.twitter.com/apps/new">witter Developer Account</a> to access the API. Once that&rsquo;s done, use the keys from the Twitter Developer Account in your code.</p>
 
 <!--more-->
 
@@ -130,7 +154,7 @@ end
     <id>http://scootcho.github.io/blog/2014/07/02/codecademy-javascript</id>
     <content type="html"><![CDATA[<p>4 hrs</p>
 
-<p>Knowing that JavaScript will be extremely useful in combination with Ruby on Rails. I started Codecademy&rsquo;s <a href="http://www.codecademy.com/tracks/javascript" target="_blank">JavaScript Track</a> today. It was especially fun building the rock-paper-scissors game.</p>
+<p>Knowing that JavaScript will be extremely useful in combination with Ruby on Rails. I started Codecademy&rsquo;s <a href="http://www.codecademy.com/tracks/javascript">JavaScript Track</a> today. It was especially fun building the rock-paper-scissors game.</p>
 
 <p>Scottbot vs Computer, who will win!?</p>
 
@@ -216,110 +240,6 @@ Computer: scissors
 
 
 <p>If you have any idea how to fix this issue please let me know! I&rsquo;d love to know!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[More Ruby Review]]></title>
-    <link href="http://scootcho.github.io/blog/2014/06/29/more-ruby-review/"/>
-    <updated>2014-06-29T23:30:50+08:00</updated>
-    <id>http://scootcho.github.io/blog/2014/06/29/more-ruby-review</id>
-    <content type="html"><![CDATA[<p>5 hrs</p>
-
-<p>Finished reviewing Codecademy&rsquo;s <a href="http://www.codecademy.com/tracks/ruby" target="_blank">Ruby Track</a> today.</p>
-
-<p>Here are some more snippets:</p>
-
-<p>```ruby use proc and assign a variable named &lsquo;cube&rsquo; that will cube an array of numbers
-cube = Proc.new { |x| x ** 3 }</p>
-
-<p>[1, 2, 3].collect!(&amp;cube)
-=> [1, 8, 27]</p>
-
-<p>[4, 5, 6].map!(&amp;cube)
-=> [64, 125, 216]
-```</p>
-
-<!--more-->
-
-
-<p>```ruby Create a program that will keep track of movie ratings.</p>
-
-<p>movies = {
-  Memento: 3,
-  Primer: 4,
-  Ishtar: 1
-}</p>
-
-<p>puts &ldquo;What would you like to do?&rdquo;
-puts &ldquo;&mdash; Type &lsquo;add&rsquo; to add a movie.&rdquo;
-puts &ldquo;&mdash; Type &lsquo;update&rsquo; to update a movie.&rdquo;
-puts &ldquo;&mdash; Type &lsquo;display&rsquo; to display all movies.&rdquo;
-puts &ldquo;&mdash; Type &lsquo;delete&rsquo; to delete a movie.&rdquo;</p>
-
-<p>choice = gets.chomp.downcase</p>
-
-<p>case choice
-when &lsquo;add&rsquo;</p>
-
-<pre><code> puts "What movie do you want to add?"
-
- title = gets.chomp
-
- if movies[title.to_sym].nil?
-   puts "What's the rating? (Type a number 0 to 4.)"
-   rating = gets.chomp
-   movies[title.to_sym] = rating.to_i
-   puts "#{title} has been added with a rating of #{rating}."
- else
-   puts "That movie already exists! Its rating is #{movies[title.to_sym]}."
- end
-</code></pre>
-
-<p>when &lsquo;update&rsquo;</p>
-
-<pre><code> puts "What movie do you want to update?"
-
- title = gets.chomp
-
- if movies[title.to_sym].nil?
-   puts "Movie not found!"
- else
-   puts "What's the new rating? (Type a number 0 to 4.)"
-   rating = gets.chomp
-   movies[title.to_sym] = rating.to_i
-   puts "#{title} has been updated with new rating of #{rating}."
- end
-</code></pre>
-
-<p>when &lsquo;display&rsquo;</p>
-
-<pre><code> movies.each do |movie, rating|
-   puts "#{movie}: #{rating}"
- end
-</code></pre>
-
-<p>when &lsquo;delete&rsquo;</p>
-
-<pre><code> puts "What movie do you want to delete?"
-
- title = gets.chomp
-
- if movies[title.to_sym].nil?
-   puts "Movie not found!"
- else
-   movies.delete(title.to_sym)
-   puts "#{title} has been removed."
- end
-</code></pre>
-
-<p>else</p>
-
-<pre><code> puts "Sorry, I didn't understand you."
-</code></pre>
-
-<p>end
-```</p>
 ]]></content>
   </entry>
   

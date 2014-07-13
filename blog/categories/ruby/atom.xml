@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-13T12:24:31+08:00</updated>
+  <updated>2014-07-13T17:58:02+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -20,9 +20,9 @@
     <id>http://scootcho.github.io/blog/2014/07/03/lesson-1-twitter-api</id>
     <content type="html"><![CDATA[<p>2 hrs</p>
 
-<p>Today I received the first lesson from the <a href="https://www.makeitwithcode.com/" target="_blank">MakeItWithCode</a> team. The lesson briefly covers some basics for beginners such as linux commands and run <code>bundle</code> to install Ruby gems. But the emphasis of this course is to build things so it dives striaght into the <a href="https://github.com/sferik/twitter" target="_blank">Twitter Ruby Gem</a>, which I like.</p>
+<p>Today I received the first lesson from the <a href="https://www.makeitwithcode.com">MakeItWithCode</a> team. The lesson briefly covers some basics for beginners such as linux commands and run <code>bundle</code> to install Ruby gems. But the emphasis of this course is to build things so it dives striaght into the <a href="https://github.com/sferik/twitter">Twitter Ruby Gem</a>, which I like.</p>
 
-<p>You&rsquo;ll need to signup for a <a href="https://dev.twitter.com/apps/new" target="_blank">Twitter Developer Account</a> to access the API. Once that&rsquo;s done, use the keys from the Twitter Developer Account in your code.</p>
+<p>You&rsquo;ll need to signup for a <a href="https://dev.twitter.com/apps/new">witter Developer Account</a> to access the API. Once that&rsquo;s done, use the keys from the Twitter Developer Account in your code.</p>
 
 <!--more-->
 
@@ -102,7 +102,7 @@ end
     <link href="http://scootcho.github.io/blog/2014/07/01/good-times-ahead/"/>
     <updated>2014-07-01T18:29:51+08:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/01/good-times-ahead</id>
-    <content type="html"><![CDATA[<p>Tomorrow, I will be starting the 10 week programming curriculumn at <a href="https://www.makeitwithcode.com/" target="_blank">MakeItWithCode</a>. I will document my learning process here to help myself clarify and understand some concepts. Oh yea, and for memorization too because I have a terrible, terrible memory.</p>
+    <content type="html"><![CDATA[<p>Tomorrow, I will be starting the 10 week programming curriculumn at <a href="https://www.makeitwithcode.com">MakeItWithCode</a>. I will document my learning process here to help myself clarify and understand some concepts. Oh yea, and for memorization too because I have a terrible, terrible memory.</p>
 
 <p>Here is the sneak peak of the <strong>course syllabus</strong>, which obtained from the site once you provide your email address.</p>
 
@@ -161,6 +161,8 @@ Data is of limited use when it&rsquo;s stuck within the Terminal. In this lesson
 
 <p>One of the most valuable things about knowing how to code is the freedom to throw up simple websites with little time and no money. Whether for a personal portfolio or a client. In this final lesson, you're going to take a Bootstrap template, convert it into a Sinatra application and deploy a real, working website.</p>
 
+
+
 ]]></content>
   </entry>
   
@@ -171,7 +173,7 @@ Data is of limited use when it&rsquo;s stuck within the Terminal. In this lesson
     <id>http://scootcho.github.io/blog/2014/06/29/more-ruby-review</id>
     <content type="html"><![CDATA[<p>5 hrs</p>
 
-<p>Finished reviewing Codecademy&rsquo;s <a href="http://www.codecademy.com/tracks/ruby" target="_blank">Ruby Track</a> today.</p>
+<p>Finished reviewing Codecademy&rsquo;s <a href="http://www.codecademy.com/tracks/ruby">Ruby Track</a> today.</p>
 
 <p>Here are some more snippets:</p>
 
@@ -275,7 +277,7 @@ when &lsquo;add&rsquo;</p>
     <id>http://scootcho.github.io/blog/2014/06/28/some-ruby-review</id>
     <content type="html"><![CDATA[<p>2.5 hrs</p>
 
-<p>I have signed up for a new online Ruby curriculum which will start next week. We&rsquo;ll be building 10 projects in 10 weeks. I figure I&rsquo;d review some materials from Codecademy&rsquo;s <a href="http://www.codecademy.com/tracks/ruby" target="_blank">Ruby Track</a> I&rsquo;ve completed <a href="http://www.codecademy.com/users/scottyu/achievements" target="_blank">last month</a></p>
+<p>I have signed up for a new online Ruby curriculum which will start next week. We&rsquo;ll be building 10 projects in 10 weeks. I figure I&rsquo;d review some materials from Codecademy&rsquo;s <a href="http://www.codecademy.com/tracks/ruby">Ruby Track</a> I&rsquo;ve completed <a href="http://www.codecademy.com/users/scottyu/achievements">last month</a>.</p>
 
 <p>I spent about 2.5 hours review part of the material and will continue the review tomorrow.</p>
 
