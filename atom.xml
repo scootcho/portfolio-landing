@@ -4,7 +4,7 @@
   <title><![CDATA[Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-15T13:45:51+08:00</updated>
+  <updated>2014-07-15T13:48:21+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -41,8 +41,8 @@
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;mailgun&#39;</span>
 </span><span class='line'>
 </span><span class='line'><span class="no">Mailgun</span><span class="o">.</span><span class="n">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
-</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;key-8h-lnw7xulidelrhgawtub8lf2oikqj8&#39;</span>
-</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">domain</span>  <span class="o">=</span> <span class="s1">&#39;sandbox2c02f80f848447ae8c30bd6f232d1428.mailgun.org&#39;</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;private-API-key-XXXXXXXXXXXXXXXX&#39;</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">domain</span>  <span class="o">=</span> <span class="s1">&#39;sandbox2083412213.mailgun.org&#39;</span>
 </span><span class='line'><span class="k">end</span>
 </span><span class='line'>
 </span><span class='line'><span class="vi">@mailgun</span> <span class="o">=</span> <span class="no">Mailgun</span><span class="p">()</span>
@@ -51,7 +51,7 @@
 </span><span class='line'>  <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott.tj.yu@gmail.com&quot;</span><span class="p">,</span>
 </span><span class='line'>  <span class="ss">:subject</span> <span class="o">=&gt;</span> <span class="s2">&quot;Email from a robot&quot;</span><span class="p">,</span>
 </span><span class='line'>  <span class="ss">:text</span> <span class="o">=&gt;</span> <span class="s2">&quot;Beep beep...beep..keep programming awesome stuff! Btw, NSA is watching!!&quot;</span><span class="p">,</span>
-</span><span class='line'>  <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott@sandbox2c02f80f848447ae8c30bd6f232d1428.mailgun.org&quot;</span>
+</span><span class='line'>  <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott@sandbox2083412213.mailgun.org&quot;</span>
 </span><span class='line'><span class="p">}</span>
 </span><span class='line'><span class="vi">@mailgun</span><span class="o">.</span><span class="n">messages</span><span class="o">.</span><span class="n">send_email</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure>

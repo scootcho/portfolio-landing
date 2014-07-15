@@ -4,7 +4,7 @@
   <title><![CDATA[Category: time | Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/blog/categories/time/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-15T13:45:51+08:00</updated>
+  <updated>2014-07-15T13:48:21+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -26,17 +26,17 @@
 require &lsquo;mailgun&rsquo;</p>
 
 <p>Mailgun.configure do |config|
-  config.api_key = &lsquo;key-8h-lnw7xulidelrhgawtub8lf2oikqj8&rsquo;
-  config.domain  = &lsquo;sandbox2c02f80f848447ae8c30bd6f232d1428.mailgun.org&rsquo;
+  config.api_key = &lsquo;private-API-key-XXXXXXXXXXXXXXXX&rsquo;
+  config.domain  = &lsquo;sandbox2083412213.mailgun.org&rsquo;
 end</p>
 
 <p>@mailgun = Mailgun()</p>
 
 <p>parameters = {
-  :to => &ldquo;<a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#99;&#x6f;&#x74;&#x74;&#x2e;&#116;&#106;&#46;&#121;&#117;&#64;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#111;&#x6d;">&#115;&#99;&#x6f;&#116;&#116;&#46;&#x74;&#106;&#x2e;&#121;&#117;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>&rdquo;,
+  :to => &ldquo;<a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#x73;&#99;&#111;&#x74;&#116;&#x2e;&#x74;&#x6a;&#x2e;&#x79;&#x75;&#x40;&#103;&#109;&#97;&#105;&#108;&#x2e;&#99;&#x6f;&#109;">&#115;&#99;&#111;&#116;&#116;&#46;&#x74;&#x6a;&#46;&#121;&#117;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;</a>&rdquo;,
   :subject => &ldquo;Email from a robot&rdquo;,
   :text => &ldquo;Beep beep&hellip;beep..keep programming awesome stuff! Btw, NSA is watching!!&rdquo;,
-  :from => &ldquo;<a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#115;&#x63;&#x6f;&#116;&#x74;&#64;&#115;&#97;&#110;&#x64;&#98;&#x6f;&#x78;&#50;&#99;&#48;&#x32;&#102;&#x38;&#x30;&#x66;&#x38;&#x34;&#x38;&#52;&#52;&#x37;&#x61;&#101;&#56;&#x63;&#x33;&#x30;&#x62;&#x64;&#54;&#x66;&#50;&#51;&#50;&#x64;&#49;&#x34;&#x32;&#56;&#46;&#x6d;&#97;&#105;&#108;&#x67;&#x75;&#110;&#x2e;&#x6f;&#114;&#x67;">&#115;&#x63;&#x6f;&#116;&#116;&#64;&#x73;&#x61;&#110;&#100;&#x62;&#111;&#120;&#x32;&#x63;&#x30;&#50;&#102;&#x38;&#48;&#102;&#x38;&#x34;&#56;&#x34;&#52;&#55;&#97;&#x65;&#56;&#x63;&#51;&#x30;&#98;&#100;&#54;&#x66;&#50;&#x33;&#x32;&#100;&#49;&#x34;&#50;&#x38;&#46;&#x6d;&#97;&#x69;&#x6c;&#103;&#x75;&#110;&#x2e;&#x6f;&#x72;&#103;</a>&rdquo;
+  :from => &ldquo;<a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x73;&#x63;&#111;&#x74;&#x74;&#x40;&#x73;&#x61;&#x6e;&#x64;&#98;&#x6f;&#x78;&#50;&#48;&#x38;&#x33;&#52;&#x31;&#50;&#50;&#49;&#51;&#x2e;&#109;&#97;&#x69;&#x6c;&#x67;&#117;&#110;&#46;&#x6f;&#114;&#x67;">&#115;&#x63;&#111;&#x74;&#x74;&#x40;&#x73;&#97;&#110;&#x64;&#98;&#111;&#x78;&#x32;&#x30;&#x38;&#x33;&#x34;&#49;&#x32;&#x32;&#49;&#51;&#x2e;&#x6d;&#97;&#x69;&#x6c;&#103;&#x75;&#110;&#46;&#x6f;&#x72;&#103;</a>&rdquo;
 }
 @mailgun.messages.send_email(parameters)
 ```</p>
