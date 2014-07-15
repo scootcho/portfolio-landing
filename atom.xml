@@ -4,7 +4,7 @@
   <title><![CDATA[Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-15T13:48:21+08:00</updated>
+  <updated>2014-07-15T14:40:37+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -22,6 +22,13 @@
 
 <p>I&rsquo;ve been waiting to jump back on my <a href="https://www.makeitwithcode.com">MakeItWithCode</a> assignment since I&rsquo;m now switching between JavaScript and Ruby.</p>
 
+<p>The goal is to use the MailGun gem and write a simple script that can send emails. When I was trying to run <code>bundle exec ruby send_email.rb</code> I kept on getting the following error:</p>
+
+<blockquote><p>$ bundle exec ruby send_email.rb             <br/>                                  <br/>/home/me/.gems/bundler/gems/mailgun-59455c20a860/lib/mailgun/base.rb:80:in `rescue in submit&#8217;: Domain not found: scott@sandbox2c02f80f848447ae8c30bd6f232d1428.mailgun.org (Mailgun::Error)</p><p>from /home/me/.gems/bundler/gems/mailgun-59455c20a860/lib/mailgun/base.rb:69:in `submit&#8217;</p><p>from /home/me/.gems/bundler/gems/mailgun-59455c20a860/lib/mailgun/message.rb:18:in `send_email&#8217;</p><p>from send_email.rb:20:in `<main>&#8217;</p></blockquote>
+
+
+<p>Here is my ruby script:</p>
+
 <figure class='code'><figcaption><span>send_email.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -38,11 +45,12 @@
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
 <span class='line-number'>16</span>
+<span class='line-number'>17</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;mailgun&#39;</span>
 </span><span class='line'>
 </span><span class='line'><span class="no">Mailgun</span><span class="o">.</span><span class="n">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
 </span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;private-API-key-XXXXXXXXXXXXXXXX&#39;</span>
-</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">domain</span>  <span class="o">=</span> <span class="s1">&#39;sandbox2083412213.mailgun.org&#39;</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">domain</span>  <span class="o">=</span> <span class="s1">&#39;post@sandbox2083412213.mailgun.org&#39;</span>
 </span><span class='line'><span class="k">end</span>
 </span><span class='line'>
 </span><span class='line'><span class="vi">@mailgun</span> <span class="o">=</span> <span class="no">Mailgun</span><span class="p">()</span>
@@ -50,14 +58,49 @@
 </span><span class='line'><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
 </span><span class='line'>  <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott.tj.yu@gmail.com&quot;</span><span class="p">,</span>
 </span><span class='line'>  <span class="ss">:subject</span> <span class="o">=&gt;</span> <span class="s2">&quot;Email from a robot&quot;</span><span class="p">,</span>
-</span><span class='line'>  <span class="ss">:text</span> <span class="o">=&gt;</span> <span class="s2">&quot;Beep beep...beep..keep programming awesome stuff! Btw, NSA is watching!!&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:text</span> <span class="o">=&gt;</span> <span class="s2">&quot;Beep beep...beep..keep programming awesome stuff!</span>
+</span><span class='line'><span class="s2">             Btw, NSA is watching!!&quot;</span><span class="p">,</span>
 </span><span class='line'>  <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott@sandbox2083412213.mailgun.org&quot;</span>
 </span><span class='line'><span class="p">}</span>
 </span><span class='line'><span class="vi">@mailgun</span><span class="o">.</span><span class="n">messages</span><span class="o">.</span><span class="n">send_email</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
+<p>What is with the error?</p>
 
+<!--more-->
+
+
+<p>I know that we&rsquo;re supposed to use the private API key but I tried to swap it with the public one anyway and that didn&rsquo;t work. After carefully examine the error message, I noticed the <code>Domain not found:</code> message and I noticed that I have used an email address instead of just the domain name (the domain should be the sandbox domain provided by mailugn).</p>
+
+<p>E.g., &ldquo;sandbox2083412213.mailgun.org&rdquo;.</p>
+
+<figure class='code'><figcaption><span>send_email.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;mailgun&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Mailgun</span><span class="o">.</span><span class="n">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;private-API-key-XXXXXXXXXXXXXXXX&#39;</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">domain</span>  <span class="o">=</span> <span class="s1">&#39;sandbox2083412213.mailgun.org&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="o">.</span>
+</span><span class='line'><span class="o">.</span>
+</span><span class='line'><span class="o">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After I changed that everything went smoothly! I just sent myself an email warning about the NSA!!</p>
+
+<p><img class="center" src="http://scootcho.github.io/images/emailsn.png"></p>
+
+<p>What other interesting things are you doing with emailing scripts?</p>
 ]]></content>
   </entry>
   
