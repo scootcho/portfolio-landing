@@ -4,7 +4,7 @@
   <title><![CDATA[Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-15T13:05:29+08:00</updated>
+  <updated>2014-07-15T13:45:51+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -15,10 +15,49 @@
   
   <entry>
     <title type="html"><![CDATA[Lesson 2: CSV &amp; Email]]></title>
-    <link href="http://scootcho.github.io/blog/2014/07/15/lesson-2-csv-and-email/"/>
-    <updated>2014-07-15T13:04:52+08:00</updated>
-    <id>http://scootcho.github.io/blog/2014/07/15/lesson-2-csv-and-email</id>
-    <content type="html"><![CDATA[
+    <link href="http://scootcho.github.io/blog/2014/07/12/lesson-2-csv-and-email/"/>
+    <updated>2014-07-12T13:04:52+08:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/12/lesson-2-csv-and-email</id>
+    <content type="html"><![CDATA[<p>2 hrs</p>
+
+<p>I&rsquo;ve been waiting to jump back on my <a href="https://www.makeitwithcode.com">MakeItWithCode</a> assignment since I&rsquo;m now switching between JavaScript and Ruby.</p>
+
+<figure class='code'><figcaption><span>send_email.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;mailgun&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Mailgun</span><span class="o">.</span><span class="n">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;key-8h-lnw7xulidelrhgawtub8lf2oikqj8&#39;</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">domain</span>  <span class="o">=</span> <span class="s1">&#39;sandbox2c02f80f848447ae8c30bd6f232d1428.mailgun.org&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@mailgun</span> <span class="o">=</span> <span class="no">Mailgun</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott.tj.yu@gmail.com&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:subject</span> <span class="o">=&gt;</span> <span class="s2">&quot;Email from a robot&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:text</span> <span class="o">=&gt;</span> <span class="s2">&quot;Beep beep...beep..keep programming awesome stuff! Btw, NSA is watching!!&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott@sandbox2c02f80f848447ae8c30bd6f232d1428.mailgun.org&quot;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="vi">@mailgun</span><span class="o">.</span><span class="n">messages</span><span class="o">.</span><span class="n">send_email</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 ]]></content>
   </entry>
   

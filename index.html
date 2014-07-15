@@ -9,7 +9,7 @@
 	<meta name="author" content="Scott Yu">
 
 	
-	<meta name="description" content="Jul 15th, 2014 Comments Lesson 2: CSV &amp; Email Jul 11th, 2014 agile code camp, code, javascript, meteor, time Comments Agile Code Camp 2 hrs &hellip;">
+	<meta name="description" content="Jul 12th, 2014 makeitwithcode, ruby, time Comments Lesson 2: CSV &amp; Email 2 hrs I&rsquo;ve been waiting to jump back on my MakeItWithCode &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,17 +116,60 @@
   
 
 
-<time datetime="2014-07-15T13:04:52+08:00" data-updated="true" itemprop="datePublished">Jul 15<span>th</span>, 2014</time></div>
+<time datetime="2014-07-12T13:04:52+08:00" data-updated="true" itemprop="datePublished">Jul 12<span>th</span>, 2014</time></div>
 		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/makeitwithcode/'>makeitwithcode</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/time/'>time</a>
+
 
 </div>
 		
-			<span class="comments"><a href="/blog/2014/07/15/lesson-2-csv-and-email/#disqus_thread">Comments</a></span>
+			<span class="comments"><a href="/blog/2014/07/12/lesson-2-csv-and-email/#disqus_thread">Comments</a></span>
 		
 	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2014/07/15/lesson-2-csv-and-email/" itemprop="url">Lesson 2: CSV &amp; Email</a></h1>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/07/12/lesson-2-csv-and-email/" itemprop="url">Lesson 2: CSV &amp; Email</a></h1>
 	<div class="entry-content" itemprop="articleBody">
-		
+		<p>2 hrs</p>
+
+<p>I&rsquo;ve been waiting to jump back on my <a href="https://www.makeitwithcode.com">MakeItWithCode</a> assignment since I&rsquo;m now switching between JavaScript and Ruby.</p>
+
+<figure class='code'><figcaption><span>send_email.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;mailgun&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Mailgun</span><span class="o">.</span><span class="n">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;key-8h-lnw7xulidelrhgawtub8lf2oikqj8&#39;</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">domain</span>  <span class="o">=</span> <span class="s1">&#39;sandbox2c02f80f848447ae8c30bd6f232d1428.mailgun.org&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@mailgun</span> <span class="o">=</span> <span class="no">Mailgun</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott.tj.yu@gmail.com&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:subject</span> <span class="o">=&gt;</span> <span class="s2">&quot;Email from a robot&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:text</span> <span class="o">=&gt;</span> <span class="s2">&quot;Beep beep...beep..keep programming awesome stuff! Btw, NSA is watching!!&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott@sandbox2c02f80f848447ae8c30bd6f232d1428.mailgun.org&quot;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="vi">@mailgun</span><span class="o">.</span><span class="n">messages</span><span class="o">.</span><span class="n">send_email</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 
 		
 		

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: time | Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/blog/categories/time/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-15T13:05:29+08:00</updated>
+  <updated>2014-07-15T13:45:51+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Lesson 2: CSV &amp; Email]]></title>
+    <link href="http://scootcho.github.io/blog/2014/07/12/lesson-2-csv-and-email/"/>
+    <updated>2014-07-12T13:04:52+08:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/12/lesson-2-csv-and-email</id>
+    <content type="html"><![CDATA[<p>2 hrs</p>
+
+<p>I&rsquo;ve been waiting to jump back on my <a href="https://www.makeitwithcode.com">MakeItWithCode</a> assignment since I&rsquo;m now switching between JavaScript and Ruby.</p>
+
+<p>```ruby send_email.rb
+require &lsquo;mailgun&rsquo;</p>
+
+<p>Mailgun.configure do |config|
+  config.api_key = &lsquo;key-8h-lnw7xulidelrhgawtub8lf2oikqj8&rsquo;
+  config.domain  = &lsquo;sandbox2c02f80f848447ae8c30bd6f232d1428.mailgun.org&rsquo;
+end</p>
+
+<p>@mailgun = Mailgun()</p>
+
+<p>parameters = {
+  :to => &ldquo;<a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#99;&#x6f;&#x74;&#x74;&#x2e;&#116;&#106;&#46;&#121;&#117;&#64;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#111;&#x6d;">&#115;&#99;&#x6f;&#116;&#116;&#46;&#x74;&#106;&#x2e;&#121;&#117;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>&rdquo;,
+  :subject => &ldquo;Email from a robot&rdquo;,
+  :text => &ldquo;Beep beep&hellip;beep..keep programming awesome stuff! Btw, NSA is watching!!&rdquo;,
+  :from => &ldquo;<a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#115;&#x63;&#x6f;&#116;&#x74;&#64;&#115;&#97;&#110;&#x64;&#98;&#x6f;&#x78;&#50;&#99;&#48;&#x32;&#102;&#x38;&#x30;&#x66;&#x38;&#x34;&#x38;&#52;&#52;&#x37;&#x61;&#101;&#56;&#x63;&#x33;&#x30;&#x62;&#x64;&#54;&#x66;&#50;&#51;&#50;&#x64;&#49;&#x34;&#x32;&#56;&#46;&#x6d;&#97;&#105;&#108;&#x67;&#x75;&#110;&#x2e;&#x6f;&#114;&#x67;">&#115;&#x63;&#x6f;&#116;&#116;&#64;&#x73;&#x61;&#110;&#100;&#x62;&#111;&#120;&#x32;&#x63;&#x30;&#50;&#102;&#x38;&#48;&#102;&#x38;&#x34;&#56;&#x34;&#52;&#55;&#97;&#x65;&#56;&#x63;&#51;&#x30;&#98;&#100;&#54;&#x66;&#50;&#x33;&#x32;&#100;&#49;&#x34;&#50;&#x38;&#46;&#x6d;&#97;&#x69;&#x6c;&#103;&#x75;&#110;&#x2e;&#x6f;&#x72;&#103;</a>&rdquo;
+}
+@mailgun.messages.send_email(parameters)
+```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Agile Code Camp]]></title>
@@ -88,90 +118,6 @@
 <script async src="http://codepen.io:/assets/embed/ei.js"></script></p>
 
 <p>I&rsquo;m looking forward to make some cool stuff. If you happen to see anything cool to build, please let me know! Thanks!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Lesson 1: Twitter API]]></title>
-    <link href="http://scootcho.github.io/blog/2014/07/03/lesson-1-twitter-api/"/>
-    <updated>2014-07-03T10:38:17+08:00</updated>
-    <id>http://scootcho.github.io/blog/2014/07/03/lesson-1-twitter-api</id>
-    <content type="html"><![CDATA[<p>2 hrs</p>
-
-<p>Today I received the first lesson from the <a href="https://www.makeitwithcode.com">MakeItWithCode</a> team. The lesson briefly covers some basics for beginners such as linux commands and run <code>bundle</code> to install Ruby gems. But the emphasis of this course is to build things so it dives striaght into the <a href="https://github.com/sferik/twitter">Twitter Ruby Gem</a>, which I like.</p>
-
-<p>You&rsquo;ll need to signup for a <a href="https://dev.twitter.com/apps/new">witter Developer Account</a> to access the API. Once that&rsquo;s done, use the keys from the Twitter Developer Account in your code.</p>
-
-<!--more-->
-
-
-<p>The first task is to get the first weet from a specified user, in this example, I used my own twitter handle, <code>scootcho</code>:</p>
-
-<p>```ruby gets_tweets.rb
-require &lsquo;twitter&rsquo;</p>
-
-<h1>Authentication details from twitter, your starting</h1>
-
-<h1>point is here: <a href="https://dev.twitter.com/apps/new">https://dev.twitter.com/apps/new</a></h1>
-
-<p>client = Twitter::REST::Client.new do |config|
-  config.consumer_key    = &ldquo;xxxxxxxxxxxxxxxxxx&rdquo;
-  config.consumer_secret = &ldquo;xxxxxxxxxxxxxxxxxx&rdquo;
-end</p>
-
-<h1>Get the first tweet of the specified user</h1>
-
-<p>puts client.user_timeline(&ldquo;scootcho&rdquo;).first.text
-```</p>
-
-<p>Next, print out the tweets to screen:</p>
-
-<p>```ruby gets_tweets.rb</p>
-
-<p>require &lsquo;twitter&rsquo;</p>
-
-<p>client = Twitter::REST::Client.new do |config|
-  config.consumer_key    = &ldquo;xxxxxxxxxxxxxxxxxx&rdquo;
-  config.consumer_secret = &ldquo;xxxxxxxxxxxxxxxxxx&rdquo;
-end</p>
-
-<h1>twitter handle to get tweets for</h1>
-
-<p>the_twitter_handle = &ldquo;scootcho&rdquo;</p>
-
-<h1>go through each tweet and print out the text</h1>
-
-<p>client.user_timeline(the_twitter_handle).each do |tweet|</p>
-
-<pre><code>puts tweet.text
-</code></pre>
-
-<p>end; nil
-```</p>
-
-<p>Pick a Twitter Handle and displays the 10 most recent tweets mentioning &ldquo;learn to code&rdquo;:</p>
-
-<p>```ruby gets_tweets.rb
-require &lsquo;twitter&rsquo;</p>
-
-<p>client = Twitter::REST::Client.new do |config|
-  config.consumer_key    = &ldquo;xxxxxxxxxxxxxxxxxx&rdquo;
-  config.consumer_secret = &ldquo;xxxxxxxxxxxxxxxxxx&rdquo;
-end
-client.search(&ldquo;learn to code&rdquo;, :result_type => &ldquo;recent&rdquo;).take(10).each do |tweet|
-  puts tweet.text
-end
-```</p>
-
-<p>There are a couple more things I would like to play with the Twitter API based on suggestions:</p>
-
-<ul>
-<li>Make the script tweet for you</li>
-<li>Try and conduct some more advanced searches using the Twitter query syntax explained <a href="https://dev.twitter.com/docs/using-search" target="_blank">here</a>:</li>
-</ul>
-
-
-<p>I will follow up with the progress in the future.</p>
 ]]></content>
   </entry>
   
