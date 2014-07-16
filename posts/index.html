@@ -9,7 +9,7 @@
 	<meta name="author" content="Scott Yu">
 
 	
-	<meta name="description" content="All Posts Lesson 2: CSV &amp; Email 2 hrs I&rsquo;ve been waiting to jump back on my MakeItWithCode assignment since I&rsquo;m now switching between &hellip;">
+	<meta name="description" content="All Posts Lesson 2: CSV &amp; Email - Continue 5 hrs I finished the JavaScript Track today. Woot! Check out my badges! The final project was to &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -114,6 +114,109 @@
       <div class="row">
         <div class="col-md-offset-3 col-md-6">
           <article>
+  <h2><a href="/blog/2014/07/12/lesson-2-csv-and-email-continue/">Lesson 2: CSV &amp; Email - Continue</a></h2>
+  
+  <p>
+    <p>5 hrs</p>
+
+
+
+
+<p>I finished the <a href="http://www.codecademy.com/tracks/javascript">JavaScript Track</a> today. Woot! Check out my <a href="http://www.codecademy.com/users/scottyu/achievements">badges</a>! The final project was to build a cash register that can &ldquo;scan&rdquo; different items and quantities then calculate the total amount. It was interesting to use the <code>add</code> method in the <code>scan</code> method within the same object. A nested function:</p>
+
+
+<p><figure class='code'><figcaption><span>Cash Register</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">cashRegister</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">total</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">lastTransactionAmount</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">add</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">itemCost</span><span class="p">){</span>
+</span><span class='line'>        <span class="k">this</span><span class="p">.</span><span class="nx">total</span> <span class="o">+=</span> <span class="p">(</span><span class="nx">itemCost</span> <span class="o">||</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">this</span><span class="p">.</span><span class="nx">lastTransactionAmount</span> <span class="o">=</span> <span class="nx">itemCost</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nx">scan</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span><span class="nx">quantity</span><span class="p">){</span>
+</span><span class='line'>        <span class="k">switch</span> <span class="p">(</span><span class="nx">item</span><span class="p">){</span>
+</span><span class='line'>        <span class="k">case</span> <span class="s2">&quot;eggs&quot;</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mf">0.98</span> <span class="o"><em></span> <span class="nx">quantity</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">case</span> <span class="s2">&quot;milk&quot;</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mf">1.23</span> <span class="o"></em></span> <span class="nx">quantity</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">case</span> <span class="s2">&quot;magazine&quot;</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mf">4.99</span> <span class="o"><em></span> <span class="nx">quantity</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">case</span> <span class="s2">&quot;chocolate&quot;</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mf">0.45</span> <span class="o"></em></span> <span class="nx">quantity</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">),</span>
+</span><span class='line'>    <span class="p">.</span>
+</span><span class='line'>    <span class="p">.</span>
+</span><span class='line'>    <span class="p">.</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">cashRegister</span><span class="p">.</span><span class="nx">scan</span><span class="p">(</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+</span><span class='line'><span class="nx">cashRegister</span><span class="p">.</span><span class="nx">scan</span><span class="p">(</span><span class="s1">&#39;milk&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Show the total bill</span>
+</span><span class='line'><span class="c1">//toFixed, number into a string, keeping only two decimal</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Your bill is &#39;</span><span class="o">+</span><span class="nx">cashRegister</span><span class="p">.</span><span class="nx">total</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-12T13:51:09+08:00" data-updated="true" itemprop="datePublished">Jul 12<span>th</span>, 2014</time>
+    
+
+
+	<a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/codecademy/'>codecademy</a>, <a class='category' href='/blog/categories/makeitwithcode/'>makeitwithcode</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/time/'>time</a>
+
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/07/12/lesson-2-csv-and-email-continue/">Read on &rarr;</a>
+  
+</article>
+
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <article>
   <h2><a href="/blog/2014/07/12/lesson-2-csv-and-email/">Lesson 2: CSV &amp; Email</a></h2>
   
   <p>
@@ -161,17 +264,17 @@
 </span><span class='line'>
 </span><span class='line'><span class="no">Mailgun</span><span class="o">.</span><span class="n">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
 </span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;private-API-key-XXXXXXXXXXXXXXXX&#39;</span>
-</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">domain</span>  <span class="o">=</span> <span class="s1">&#39;post@sandbox2083412213.mailgun.org&#39;</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">domain</span>  <span class="o">=</span> <span class="s1">&#39;post@sandbox12345.mailgun.org&#39;</span>
 </span><span class='line'><span class="k">end</span>
 </span><span class='line'>
 </span><span class='line'><span class="vi">@mailgun</span> <span class="o">=</span> <span class="no">Mailgun</span><span class="p">()</span>
 </span><span class='line'>
 </span><span class='line'><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>  <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott.tj.yu@gmail.com&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott@robot.com&quot;</span><span class="p">,</span>
 </span><span class='line'>  <span class="ss">:subject</span> <span class="o">=&gt;</span> <span class="s2">&quot;Email from a robot&quot;</span><span class="p">,</span>
 </span><span class='line'>  <span class="ss">:text</span> <span class="o">=&gt;</span> <span class="s2">&quot;Beep beep&hellip;beep..keep programming awesome stuff!</span>
 </span><span class='line'><span class="s2">             Btw, NSA is watching!!&quot;</span><span class="p">,</span>
-</span><span class='line'>  <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott@sandbox2083412213.mailgun.org&quot;</span>
+</span><span class='line'>  <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott@sandbox12345.mailgun.org&quot;</span>
 </span><span class='line'><span class="p">}</span>
 </span><span class='line'><span class="vi">@mailgun</span><span class="o">.</span><span class="n">messages</span><span class="o">.</span><span class="n">send_email</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure></p>

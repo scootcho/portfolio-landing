@@ -4,7 +4,7 @@
   <title><![CDATA[Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-15T14:40:37+08:00</updated>
+  <updated>2014-07-16T15:47:51+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -12,6 +12,202 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Lesson 2: CSV &amp; Email - Continue]]></title>
+    <link href="http://scootcho.github.io/blog/2014/07/12/lesson-2-csv-and-email-continue/"/>
+    <updated>2014-07-12T13:51:09+08:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/12/lesson-2-csv-and-email-continue</id>
+    <content type="html"><![CDATA[<p>5 hrs</p>
+
+<p>I finished the <a href="http://www.codecademy.com/tracks/javascript">JavaScript Track</a> today. Woot! Check out my <a href="http://www.codecademy.com/users/scottyu/achievements">badges</a>! The final project was to build a cash register that can &ldquo;scan&rdquo; different items and quantities then calculate the total amount. It was interesting to use the <code>add</code> method in the <code>scan</code> method within the same object. A nested function:</p>
+
+<figure class='code'><figcaption><span>Cash Register</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">cashRegister</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">total</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">lastTransactionAmount</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">add</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">itemCost</span><span class="p">){</span>
+</span><span class='line'>        <span class="k">this</span><span class="p">.</span><span class="nx">total</span> <span class="o">+=</span> <span class="p">(</span><span class="nx">itemCost</span> <span class="o">||</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">this</span><span class="p">.</span><span class="nx">lastTransactionAmount</span> <span class="o">=</span> <span class="nx">itemCost</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nx">scan</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span><span class="nx">quantity</span><span class="p">){</span>
+</span><span class='line'>        <span class="k">switch</span> <span class="p">(</span><span class="nx">item</span><span class="p">){</span>
+</span><span class='line'>        <span class="k">case</span> <span class="s2">&quot;eggs&quot;</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mf">0.98</span> <span class="o">*</span> <span class="nx">quantity</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">case</span> <span class="s2">&quot;milk&quot;</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mf">1.23</span> <span class="o">*</span> <span class="nx">quantity</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">case</span> <span class="s2">&quot;magazine&quot;</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mf">4.99</span> <span class="o">*</span> <span class="nx">quantity</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">case</span> <span class="s2">&quot;chocolate&quot;</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mf">0.45</span> <span class="o">*</span> <span class="nx">quantity</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">),</span>
+</span><span class='line'>    <span class="p">.</span>
+</span><span class='line'>    <span class="p">.</span>
+</span><span class='line'>    <span class="p">.</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">cashRegister</span><span class="p">.</span><span class="nx">scan</span><span class="p">(</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+</span><span class='line'><span class="nx">cashRegister</span><span class="p">.</span><span class="nx">scan</span><span class="p">(</span><span class="s1">&#39;milk&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Show the total bill</span>
+</span><span class='line'><span class="c1">//toFixed, number into a string, keeping only two decimal</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Your bill is &#39;</span><span class="o">+</span><span class="nx">cashRegister</span><span class="p">.</span><span class="nx">total</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!--more-->
+
+
+
+
+<br/>
+
+
+<p>I also came back around to work on my <a href="https://www.makeitwithcode.com">MakeItWithCode</a> assignment. <a href="http://scootcho.github.io/blog/2014/07/12/lesson-2-csv-and-email/">Last HW</a> I used the mailgun gem to send myself an email. The goal this time is to combine powers from twitter, mailgun, and csv gems. To send myself an email attached with twitter seach results in a spreadsheet!</p>
+
+<p>After figuring out how to create and send a csv file through MailGun, I was left with working out how to put them together.</p>
+
+<p>Instead of sending hard-coded info like this:</p>
+
+<figure class='code'><figcaption><span>Cash Register</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">CSV</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;my_results.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="nx">csv</span><span class="o">|</span>
+</span><span class='line'>  <span class="nx">csv</span> <span class="o">&lt;&lt;</span> <span class="p">[</span><span class="s2">&quot;firstname&quot;</span><span class="p">,</span> <span class="s2">&quot;lastname&quot;</span><span class="p">,</span> <span class="s2">&quot;phone&quot;</span><span class="p">,</span> <span class="s2">&quot;email&quot;</span><span class="p">]</span>
+</span><span class='line'>  <span class="nx">csv</span> <span class="o">&lt;&lt;</span> <span class="p">[</span><span class="s2">&quot;scott&quot;</span><span class="p">,</span> <span class="s2">&quot;yu&quot;</span><span class="p">,</span> <span class="s2">&quot;888-8888&quot;</span><span class="p">,</span> <span class="s2">&quot;scott@robots.com&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="nx">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I need to search the twitter feed and put the result in a CSV file. Which means, I can&rsquo;t just use the above example as the search results will all be put in a single row because of the <code>csv &lt;&lt; []</code> iteration.</p>
+
+<p>What I need is a nested iteration that will first open a CSV file and write the results line by line into the file.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">CSV</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;tweet_result.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">csv</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;learn to code&quot;</span><span class="p">,</span> <span class="ss">:result_type</span> <span class="o">=&gt;</span> <span class="s2">&quot;recent&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">tweet</span><span class="o">|</span>
+</span><span class='line'>        <span class="n">csv</span> <span class="o">&lt;&lt;</span> <span class="o">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="o">]</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<br />
+
+
+<p>Here is the completed script :)</p>
+
+<figure class='code'><figcaption><span>twitter_spreadsheet_email.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;mailgun&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;csv&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;twitter&#39;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="n">client</span> <span class="o">=</span> <span class="ss">Twitter</span><span class="p">:</span><span class="ss">:REST</span><span class="o">::</span><span class="no">Client</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">consumer_key</span>    <span class="o">=</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxx&quot;</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxx&quot;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="no">CSV</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;tweet_result.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">csv</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;learn to code&quot;</span><span class="p">,</span> <span class="ss">:result_type</span> <span class="o">=&gt;</span> <span class="s2">&quot;recent&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">tweet</span><span class="o">|</span>
+</span><span class='line'>        <span class="n">csv</span> <span class="o">&lt;&lt;</span> <span class="o">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="o">]</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">tweets</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;tweet_result.csv&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="no">Mailgun</span><span class="o">.</span><span class="n">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;private-API-key-XXXXXXXXXXXXXXXX&#39;</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">domain</span>  <span class="o">=</span> <span class="s1">&#39;sandbox12345.mailgun.org&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="vi">@mailgun</span> <span class="o">=</span> <span class="no">Mailgun</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott@robot.com&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:subject</span> <span class="o">=&gt;</span> <span class="s2">&quot;Email from a robot&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:text</span> <span class="o">=&gt;</span> <span class="s2">&quot;Beep beep...beep..keep programming awesome stuff! Btw, NSA is watching!!&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott@sandbox12345.mailgun.org&#39;,</span>
+</span><span class='line'><span class="s2">  :attachment =&gt; File.new(tweets)</span>
+</span><span class='line'><span class="s2">}</span>
+</span><span class='line'><span class="s2">@mailgun.messages.send_email(parameters)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Woot! I got the tweets attachment in my email!</p>
+
+<p><img class="center" src="http://scootcho.github.io/images/tweetcsv.png"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Lesson 2: CSV &amp; Email]]></title>
@@ -50,17 +246,17 @@
 </span><span class='line'>
 </span><span class='line'><span class="no">Mailgun</span><span class="o">.</span><span class="n">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
 </span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;private-API-key-XXXXXXXXXXXXXXXX&#39;</span>
-</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">domain</span>  <span class="o">=</span> <span class="s1">&#39;post@sandbox2083412213.mailgun.org&#39;</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">domain</span>  <span class="o">=</span> <span class="s1">&#39;post@sandbox12345.mailgun.org&#39;</span>
 </span><span class='line'><span class="k">end</span>
 </span><span class='line'>
 </span><span class='line'><span class="vi">@mailgun</span> <span class="o">=</span> <span class="no">Mailgun</span><span class="p">()</span>
 </span><span class='line'>
 </span><span class='line'><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>  <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott.tj.yu@gmail.com&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott@robot.com&quot;</span><span class="p">,</span>
 </span><span class='line'>  <span class="ss">:subject</span> <span class="o">=&gt;</span> <span class="s2">&quot;Email from a robot&quot;</span><span class="p">,</span>
 </span><span class='line'>  <span class="ss">:text</span> <span class="o">=&gt;</span> <span class="s2">&quot;Beep beep...beep..keep programming awesome stuff!</span>
 </span><span class='line'><span class="s2">             Btw, NSA is watching!!&quot;</span><span class="p">,</span>
-</span><span class='line'>  <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott@sandbox2083412213.mailgun.org&quot;</span>
+</span><span class='line'>  <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="s2">&quot;scott@sandbox12345.mailgun.org&quot;</span>
 </span><span class='line'><span class="p">}</span>
 </span><span class='line'><span class="vi">@mailgun</span><span class="o">.</span><span class="n">messages</span><span class="o">.</span><span class="n">send_email</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure>

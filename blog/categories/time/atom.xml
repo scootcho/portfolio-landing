@@ -4,7 +4,7 @@
   <title><![CDATA[Category: time | Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/blog/categories/time/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-15T14:40:37+08:00</updated>
+  <updated>2014-07-16T15:47:51+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -12,6 +12,137 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Lesson 2: CSV &amp; Email - Continue]]></title>
+    <link href="http://scootcho.github.io/blog/2014/07/12/lesson-2-csv-and-email-continue/"/>
+    <updated>2014-07-12T13:51:09+08:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/12/lesson-2-csv-and-email-continue</id>
+    <content type="html"><![CDATA[<p>5 hrs</p>
+
+<p>I finished the <a href="http://www.codecademy.com/tracks/javascript">JavaScript Track</a> today. Woot! Check out my <a href="http://www.codecademy.com/users/scottyu/achievements">badges</a>! The final project was to build a cash register that can &ldquo;scan&rdquo; different items and quantities then calculate the total amount. It was interesting to use the <code>add</code> method in the <code>scan</code> method within the same object. A nested function:</p>
+
+<p>```javascript Cash Register
+var cashRegister = {</p>
+
+<pre><code>total:0,
+lastTransactionAmount: 0,
+add: function(itemCost){
+    this.total += (itemCost || 0);
+    this.lastTransactionAmount = itemCost;
+},
+scan: function(item,quantity){
+    switch (item){
+    case "eggs": this.add(0.98 * quantity); break;
+    case "milk": this.add(1.23 * quantity); break;
+    case "magazine": this.add(4.99 * quantity); break;
+    case "chocolate": this.add(0.45 * quantity); break;
+    }
+    return true;
+),
+.
+.
+.
+</code></pre>
+
+<p>};</p>
+
+<p>cashRegister.scan(&lsquo;eggs&rsquo;,2);
+cashRegister.scan(&lsquo;milk&rsquo;,3);</p>
+
+<p>// Show the total bill
+//toFixed, number into a string, keeping only two decimal
+console.log(&lsquo;Your bill is &rsquo;+cashRegister.total.toFixed(2));</p>
+
+<p>```</p>
+
+<!--more-->
+
+
+
+
+<br/>
+
+
+<p>I also came back around to work on my <a href="https://www.makeitwithcode.com">MakeItWithCode</a> assignment. <a href="/blog/2014/07/12/lesson-2-csv-and-email/">Last HW</a> I used the mailgun gem to send myself an email. The goal this time is to combine powers from twitter, mailgun, and csv gems. To send myself an email attached with twitter seach results in a spreadsheet!</p>
+
+<p>After figuring out how to create and send a csv file through MailGun, I was left with working out how to put them together.</p>
+
+<p>Instead of sending hard-coded info like this:</p>
+
+<p>```
+CSV.open(&ldquo;my_results.csv&rdquo;, &ldquo;wb&rdquo;) do |csv|
+  csv &lt;&lt; [&ldquo;firstname&rdquo;, &ldquo;lastname&rdquo;, &ldquo;phone&rdquo;, &ldquo;email&rdquo;]
+  csv &lt;&lt; [&ldquo;scott&rdquo;, &ldquo;yu&rdquo;, &ldquo;888-8888&rdquo;, &ldquo;<a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#115;&#99;&#x6f;&#116;&#x74;&#64;&#114;&#x6f;&#98;&#x6f;&#x74;&#115;&#46;&#99;&#111;&#109;">&#x73;&#99;&#111;&#116;&#x74;&#x40;&#x72;&#111;&#x62;&#x6f;&#x74;&#x73;&#46;&#x63;&#x6f;&#109;</a>&rdquo;]
+end</p>
+
+<p>```</p>
+
+<p>I need to search the twitter feed and put the result in a CSV file. Which means, I can&rsquo;t just use the above example as the search results will all be put in a single row because of the <code>csv &lt;&lt; []</code> iteration.</p>
+
+<p>What I need is a nested iteration that will first open a CSV file and write the results line by line into the file.</p>
+
+<p>```ruby
+CSV.open(&ldquo;tweet_result.csv&rdquo;, &ldquo;wb&rdquo;) do |csv|</p>
+
+<pre><code>client.search("learn to code", :result_type =&gt; "recent").take(10).each do |tweet|
+    csv &lt;&lt; [tweet.text]
+end
+</code></pre>
+
+<p>end</p>
+
+<p>```</p>
+
+<br />
+
+
+<p>Here is the completed script :)</p>
+
+<p>```ruby twitter_spreadsheet_email.rb
+require &lsquo;mailgun&rsquo;
+require &lsquo;csv&rsquo;
+require &lsquo;twitter&rsquo;</p>
+
+<p>client = Twitter::REST::Client.new do |config|
+  config.consumer_key    = &ldquo;xxxxxxxxxxxxxxxxxx&rdquo;
+  config.consumer_secret = &ldquo;xxxxxxxxxxxxxxxxxx&rdquo;
+end</p>
+
+<p>CSV.open(&ldquo;tweet_result.csv&rdquo;, &ldquo;wb&rdquo;) do |csv|</p>
+
+<pre><code>client.search("learn to code", :result_type =&gt; "recent").take(10).each do |tweet|
+    csv &lt;&lt; [tweet.text]
+end
+</code></pre>
+
+<p>end</p>
+
+<p>tweets = File.open(&ldquo;tweet_result.csv&rdquo;)</p>
+
+<p>Mailgun.configure do |config|
+  config.api_key = &lsquo;private-API-key-XXXXXXXXXXXXXXXX&rsquo;
+  config.domain  = &lsquo;sandbox12345.mailgun.org&rsquo;
+end</p>
+
+<p>@mailgun = Mailgun()</p>
+
+<p>parameters = {
+  :to => &ldquo;<a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#x73;&#99;&#x6f;&#x74;&#116;&#x40;&#114;&#111;&#98;&#111;&#116;&#46;&#99;&#x6f;&#x6d;">&#115;&#x63;&#111;&#116;&#116;&#64;&#x72;&#111;&#x62;&#x6f;&#x74;&#x2e;&#x63;&#111;&#109;</a>&rdquo;,
+  :subject => &ldquo;Email from a robot&rdquo;,
+  :text => &ldquo;Beep beep&hellip;beep..keep programming awesome stuff! Btw, NSA is watching!!&rdquo;,
+  :from => &ldquo;<a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#115;&#99;&#x6f;&#x74;&#116;&#x40;&#x73;&#97;&#x6e;&#x64;&#x62;&#x6f;&#x78;&#x31;&#50;&#x33;&#x34;&#x35;&#46;&#109;&#97;&#x69;&#108;&#x67;&#x75;&#x6e;&#x2e;&#111;&#114;&#103;">&#115;&#99;&#111;&#x74;&#x74;&#x40;&#x73;&#97;&#x6e;&#100;&#98;&#111;&#x78;&#x31;&#x32;&#x33;&#52;&#x35;&#46;&#109;&#x61;&#x69;&#108;&#103;&#117;&#x6e;&#x2e;&#x6f;&#x72;&#x67;</a>',
+  :attachment => File.new(tweets)
+}
+@mailgun.messages.send_email(parameters)</p>
+
+<p>```</p>
+
+<p>Woot! I got the tweets attachment in my email!</p>
+
+<p><img class="center" src="/images/tweetcsv.png"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Lesson 2: CSV &amp; Email]]></title>
@@ -24,7 +155,7 @@
 
 <p>The goal is to use the MailGun gem and write a simple script that can send emails. When I was trying to run <code>bundle exec ruby send_email.rb</code> I kept on getting the following error:</p>
 
-<p><blockquote><p>$ bundle exec ruby send_email.rb</p></p><p><p>/home/me/.gems/bundler/gems/mailgun-59455c20a860/lib/mailgun/base.rb:80:in `rescue in submit': Domain not found: <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#115;&#x63;&#x6f;&#116;&#116;&#x40;&#x73;&#97;&#110;&#x64;&#98;&#x6f;&#120;&#50;&#99;&#x30;&#50;&#102;&#x38;&#48;&#x66;&#56;&#52;&#x38;&#x34;&#52;&#55;&#97;&#101;&#x38;&#x63;&#51;&#48;&#x62;&#100;&#54;&#102;&#x32;&#51;&#50;&#100;&#x31;&#52;&#50;&#x38;&#46;&#x6d;&#x61;&#105;&#x6c;&#103;&#117;&#x6e;&#46;&#x6f;&#x72;&#103;">&#x73;&#x63;&#111;&#116;&#x74;&#64;&#115;&#97;&#x6e;&#100;&#98;&#111;&#x78;&#x32;&#x63;&#48;&#x32;&#x66;&#x38;&#x30;&#x66;&#56;&#x34;&#56;&#52;&#x34;&#x37;&#97;&#101;&#56;&#99;&#x33;&#48;&#98;&#x64;&#x36;&#x66;&#x32;&#x33;&#50;&#100;&#x31;&#52;&#x32;&#56;&#x2e;&#x6d;&#x61;&#x69;&#108;&#103;&#117;&#110;&#46;&#111;&#x72;&#x67;</a> (Mailgun::Error)</p></p><p><p>from /home/me/.gems/bundler/gems/mailgun-59455c20a860/lib/mailgun/base.rb:69:in `submit'</p></p><p><p>from /home/me/.gems/bundler/gems/mailgun-59455c20a860/lib/mailgun/message.rb:18:in `send_email'</p></p><p><p>from send_email.rb:20:in `<main>'</p></p><p><p></p></blockquote></p>
+<p><blockquote><p>$ bundle exec ruby send_email.rb</p></p><p><p>/home/me/.gems/bundler/gems/mailgun-59455c20a860/lib/mailgun/base.rb:80:in `rescue in submit': Domain not found: <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#115;&#99;&#111;&#116;&#116;&#64;&#x73;&#x61;&#x6e;&#x64;&#98;&#111;&#x78;&#50;&#99;&#48;&#50;&#102;&#56;&#x30;&#x66;&#56;&#52;&#x38;&#x34;&#52;&#x37;&#x61;&#x65;&#56;&#99;&#x33;&#48;&#98;&#x64;&#54;&#102;&#50;&#51;&#50;&#x64;&#49;&#52;&#x32;&#56;&#46;&#x6d;&#x61;&#105;&#108;&#103;&#117;&#110;&#x2e;&#x6f;&#x72;&#x67;">&#115;&#x63;&#111;&#116;&#x74;&#x40;&#x73;&#97;&#110;&#x64;&#98;&#111;&#x78;&#50;&#99;&#x30;&#x32;&#x66;&#56;&#x30;&#102;&#x38;&#52;&#56;&#x34;&#52;&#55;&#97;&#x65;&#56;&#x63;&#x33;&#x30;&#x62;&#x64;&#54;&#102;&#50;&#51;&#50;&#100;&#x31;&#x34;&#x32;&#x38;&#x2e;&#x6d;&#97;&#105;&#x6c;&#103;&#117;&#110;&#46;&#x6f;&#x72;&#103;</a> (Mailgun::Error)</p></p><p><p>from /home/me/.gems/bundler/gems/mailgun-59455c20a860/lib/mailgun/base.rb:69:in `submit'</p></p><p><p>from /home/me/.gems/bundler/gems/mailgun-59455c20a860/lib/mailgun/message.rb:18:in `send_email'</p></p><p><p>from send_email.rb:20:in `<main>'</p></p><p><p></p></blockquote></p>
 
 <p>Here is my ruby script:</p>
 
@@ -33,20 +164,20 @@ require &lsquo;mailgun&rsquo;</p>
 
 <p>Mailgun.configure do |config|
   config.api_key = &lsquo;private-API-key-XXXXXXXXXXXXXXXX&rsquo;
-  config.domain  = &lsquo;<a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#112;&#x6f;&#x73;&#x74;&#64;&#115;&#x61;&#110;&#x64;&#98;&#x6f;&#120;&#x32;&#48;&#x38;&#51;&#52;&#49;&#50;&#x32;&#49;&#51;&#46;&#x6d;&#97;&#x69;&#x6c;&#103;&#x75;&#x6e;&#46;&#111;&#114;&#x67;">&#x70;&#111;&#x73;&#x74;&#x40;&#115;&#x61;&#110;&#100;&#98;&#x6f;&#120;&#x32;&#x30;&#56;&#x33;&#52;&#49;&#50;&#50;&#x31;&#51;&#46;&#x6d;&#97;&#x69;&#108;&#103;&#x75;&#110;&#x2e;&#x6f;&#114;&#103;</a>&rsquo;
+  config.domain  = &lsquo;<a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#x70;&#x6f;&#x73;&#x74;&#64;&#x73;&#97;&#110;&#100;&#x62;&#x6f;&#120;&#49;&#50;&#51;&#52;&#x35;&#46;&#109;&#x61;&#105;&#x6c;&#x67;&#117;&#x6e;&#x2e;&#x6f;&#114;&#103;">&#x70;&#x6f;&#x73;&#x74;&#64;&#x73;&#x61;&#x6e;&#x64;&#x62;&#111;&#120;&#49;&#50;&#51;&#x34;&#53;&#46;&#109;&#x61;&#105;&#108;&#x67;&#117;&#x6e;&#46;&#x6f;&#114;&#x67;</a>&rsquo;
 end</p>
 
 <p>@mailgun = Mailgun()</p>
 
 <p>parameters = {
-  :to => &ldquo;<a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x73;&#x63;&#111;&#116;&#x74;&#46;&#x74;&#x6a;&#46;&#x79;&#117;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#x73;&#99;&#x6f;&#x74;&#x74;&#x2e;&#116;&#x6a;&#46;&#121;&#117;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#x6f;&#109;</a>&rdquo;,
+  :to => &ldquo;<a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#x73;&#x63;&#111;&#116;&#116;&#64;&#114;&#111;&#98;&#111;&#x74;&#46;&#99;&#111;&#x6d;">&#115;&#99;&#x6f;&#116;&#x74;&#x40;&#x72;&#x6f;&#98;&#x6f;&#x74;&#x2e;&#x63;&#x6f;&#x6d;</a>&rdquo;,
   :subject => &ldquo;Email from a robot&rdquo;,
   :text => &ldquo;Beep beep&hellip;beep..keep programming awesome stuff!</p>
 
 <pre><code>        Btw, NSA is watching!!",
 </code></pre>
 
-<p>  :from => &ldquo;<a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#115;&#99;&#x6f;&#116;&#116;&#64;&#x73;&#97;&#110;&#100;&#x62;&#111;&#120;&#50;&#48;&#56;&#x33;&#52;&#x31;&#x32;&#50;&#x31;&#51;&#46;&#109;&#x61;&#x69;&#108;&#x67;&#117;&#x6e;&#46;&#x6f;&#114;&#103;">&#x73;&#x63;&#x6f;&#x74;&#x74;&#x40;&#x73;&#x61;&#x6e;&#x64;&#x62;&#111;&#120;&#50;&#x30;&#x38;&#51;&#52;&#x31;&#50;&#50;&#x31;&#x33;&#x2e;&#109;&#97;&#105;&#108;&#x67;&#117;&#110;&#46;&#x6f;&#114;&#103;</a>&rdquo;
+<p>  :from => &ldquo;<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#x63;&#111;&#116;&#116;&#64;&#115;&#97;&#110;&#x64;&#98;&#x6f;&#x78;&#x31;&#50;&#x33;&#52;&#53;&#46;&#109;&#97;&#x69;&#x6c;&#x67;&#x75;&#110;&#46;&#x6f;&#114;&#103;">&#x73;&#x63;&#x6f;&#x74;&#x74;&#64;&#115;&#97;&#110;&#100;&#x62;&#x6f;&#x78;&#49;&#50;&#x33;&#x34;&#x35;&#x2e;&#x6d;&#x61;&#x69;&#x6c;&#103;&#x75;&#110;&#46;&#x6f;&#114;&#x67;</a>&rdquo;
 }
 @mailgun.messages.send_email(parameters)
 ```
@@ -128,32 +259,6 @@ end
 <p>My first impression of Taiwan&rsquo;s startups is really positive. It&rsquo;s a tight-knit environment that feels like a family. It&rsquo;s somewhat similar to the startup scene in the Philippines, where people are just open minded to share experiences and help one another.</p>
 
 <p>Cheers to all of those who are pursuing their passions and riding them emotional rollercoasters! =)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Codecademy JavaScript Continue]]></title>
-    <link href="http://scootcho.github.io/blog/2014/07/08/codecademy-javascript-continue/"/>
-    <updated>2014-07-08T22:39:52+08:00</updated>
-    <id>http://scootcho.github.io/blog/2014/07/08/codecademy-javascript-continue</id>
-    <content type="html"><![CDATA[<p>3.5 hrs</p>
-
-<p>I continued the Codecademy&rsquo;s <a href="http://www.codecademy.com/tracks/javascript">JavaScript Track</a> today. My goal is to wrap up this week so I can build more front-end mini projects.</p>
-
-<p>Although I did a couple of basic JavaScript projects earlier (<a href="https://github.com/scootcho/the_odin_project/tree/master/sketchpad">Sketchpad</a> &amp; <a href="https://github.com/scootcho/the_odin_project/tree/master/javascript">Project Euler</a>), but I felt the need for more practice with my JavaScript &amp; jQuery when I was working on the <a href="/blog/2014/06/30/javascript-range-slider/">range slider</a> last week.</p>
-
-<p>Good thing is, I have already scoped out a couple of cool mini projects to build:</p>
-
-<p><pre class="codepen" data-height="440" data-type="result" data-href="IHbvh" data-user="jackrugile"><code> </code></pre>
-<script async src="http://codepen.io:/assets/embed/ei.js"></script></p>
-
-<!--more-->
-
-
-<p><pre class="codepen" data-height="440" data-type="result" data-href="sjcoa" data-user="zerospree"><code> </code></pre>
-<script async src="http://codepen.io:/assets/embed/ei.js"></script></p>
-
-<p>I&rsquo;m looking forward to make some cool stuff. If you happen to see anything cool to build, please let me know! Thanks!</p>
 ]]></content>
   </entry>
   
