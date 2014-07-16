@@ -33,17 +33,17 @@ require 'mailgun'
 
 Mailgun.configure do |config|
   config.api_key = 'private-API-key-XXXXXXXXXXXXXXXX'
-  config.domain  = 'post@sandbox2083412213.mailgun.org'
+  config.domain  = 'post@sandbox12345.mailgun.org'
 end
 
 @mailgun = Mailgun()
 
 parameters = {
-  :to => "scott.tj.yu@gmail.com",
+  :to => "scott@robot.com",
   :subject => "Email from a robot",
   :text => "Beep beep...beep..keep programming awesome stuff!
   			Btw, NSA is watching!!",
-  :from => "scott@sandbox2083412213.mailgun.org"
+  :from => "scott@sandbox12345.mailgun.org"
 }
 @mailgun.messages.send_email(parameters)
 ```
