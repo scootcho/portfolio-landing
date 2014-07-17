@@ -1,0 +1,33 @@
+---
+layout: post
+title: "Meteor JS"
+date: 2014-07-14 13:54:13 +0800
+comments: true
+categories: [agile code camp, meteor, javascript, code, time]
+---
+
+2 hrs
+
+I went to check out the [Agile Code Camp][codecamp] today, a JavaScript focused development code camp. The camp emphasizes on learning by building method and the goal is to collaborate and build as many projects for the duration of the camp. The class was split into 5 different groups and each group was asked to come up with an interesting idea to hack and collaborate on for the next 3 weeks.
+
+{% img center /images/agilecodecamp.jpg %}
+
+<!--more-->
+
+There were some really interesting concepts:
+
+*  THREE - messaging app that can be sort by different opics in a 3D space
+*  iFridge - smart application for your fridge that will help track your items with expiration warnings.
+
+Plus a couple more interesting ones.
+
+The project I joined is called "3D Tatoo", it's somewhat a message board, where people can leave messages. But the idea is that these messages will be tattooed onto a person that exist in a 3D environment. Plus when these people are getting tatooed, they will be screaming out funny things because of the pain! I find this project to be HILARIOUS and I can't wait to work on it. LOL.
+
+Stay tuned!
+ 
+
+
+
+
+
+[codecamp]: http://www.innovatist.org/agile-code-camp/
