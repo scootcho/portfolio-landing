@@ -4,7 +4,7 @@
   <title><![CDATA[Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-16T15:47:51+08:00</updated>
+  <updated>2014-07-17T14:32:28+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Meteor JS]]></title>
+    <link href="http://scootcho.github.io/blog/2014/07/14/meteor-js/"/>
+    <updated>2014-07-14T13:54:13+08:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/14/meteor-js</id>
+    <content type="html"><![CDATA[<p>2 hrs</p>
+
+<p>I went to check out the <a href="http://www.innovatist.org/agile-code-camp/">Agile Code Camp</a> today, a JavaScript focused development code camp. The camp emphasizes on learning by building method and the goal is to collaborate and build as many projects for the duration of the camp. The class was split into 5 different groups and each group was asked to come up with an interesting idea to hack and collaborate on for the next 3 weeks.</p>
+
+<p><img class="center" src="http://scootcho.github.io/images/agilecodecamp.jpg"></p>
+
+<!--more-->
+
+
+<p>There were some really interesting concepts:</p>
+
+<ul>
+<li>THREE &ndash; messaging app that can be sort by different opics in a 3D space</li>
+<li>iFridge &ndash; smart application for your fridge that will help track your items with expiration warnings.</li>
+</ul>
+
+
+<p>Plus a couple more interesting ones.</p>
+
+<p>The project I joined is called &ldquo;3D Tatoo&rdquo;, it&rsquo;s somewhat a message board, where people can leave messages. But the idea is that these messages will be tattooed onto a person that exist in a 3D environment. Plus when these people are getting tatooed, they will be screaming out funny things because of the pain! I find this project to be HILARIOUS and I can&rsquo;t wait to work on it. LOL.</p>
+
+<p>Stay tuned!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Lesson 2: CSV &amp; Email - Continue]]></title>
