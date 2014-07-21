@@ -120,7 +120,7 @@ parameters = {
 
 Woot! I got the tweets attachment in my email!
 
-{% img center /images/tweetcsv.png %}
+{% img center /images/posts/tweetcsv.png %}
 
 
 [track]: http://www.codecademy.com/tracks/javascript

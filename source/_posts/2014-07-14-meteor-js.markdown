@@ -3,14 +3,14 @@ layout: post
 title: "Meteor JS"
 date: 2014-07-14 13:54:13 +0800
 comments: true
-categories: [agile code camp, meteor, javascript, code, time]
+categories: [agile code camp, meteorjs, javascript, code, time]
 ---
 
 2 hrs
 
 I went to check out the [Agile Code Camp][codecamp] today, a JavaScript focused development code camp. The camp emphasizes on learning by building method and the goal is to collaborate and build as many projects for the duration of the camp. The class was split into 5 different groups and each group was asked to come up with an interesting idea to hack and collaborate on for the next 3 weeks.
 
-{% img center /images/agilecodecamp.jpg %}
+{% img center /images/posts/agilecodecamp.jpg %}
 
 <!--more-->
 

@@ -10,11 +10,11 @@ categories: [startup, taiwan, meetup, javascript, time]
 
 I didn't get to code too much today as I went to attend a [meetup event][event] in Taipei, hosted by [IIINNO][iiinno]. There were handfull of pitches and one of them was [Between][between], an app that focuses on sharing and commucation between couples. Between started in Korea and they have just raised $3M for Series A earlier this year. They're already in Japan and now expanding to Taiawn and a friend of mine is on the Taiwan team.
 
-{% img center /images/between.jpg %}
+{% img center /images/posts/between.jpg %}
 
 <!--more-->
 
-{% img center /images/twstartup.jpg %}
+{% img center /images/posts/twstartup.jpg %}
 
 
 I chatted up with some startup peeps including one of the guys from [Sentri][sentri], a smart home security hardware designed for control and visibility of your home.

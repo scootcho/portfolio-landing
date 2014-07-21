@@ -72,7 +72,7 @@ end
 After I changed that everything went smoothly! I just sent myself an email warning about the NSA!! 
 
 
-{% img center /images/emailsn.png %}
+{% img center /images/posts/emailsn.png %}
 
 
 What other interesting things are you doing with emailing scripts?
