@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Open Source | Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/blog/categories/open-source/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-22T14:36:44+08:00</updated>
+  <updated>2014-07-22T04:06:30-04:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Open Source Cloud &amp; Desktop IDE]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/04/open-source-cloud-and-desktop-ide/"/>
-    <updated>2014-07-04T15:08:47+08:00</updated>
+    <updated>2014-07-04T03:08:47-04:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/04/open-source-cloud-and-desktop-ide</id>
     <content type="html"><![CDATA[<p>I came across <a href="https://github.com/FriendCode/codebox">Codebox IDE</a> an open source cloud IDE because a project I&rsquo;m working on is using it as the cloud development enviornment.</p>
 
