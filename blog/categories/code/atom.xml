@@ -4,7 +4,7 @@
   <title><![CDATA[Category: code | Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/blog/categories/code/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-26T03:45:20+00:00</updated>
+  <updated>2014-07-26T13:15:14+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -15,13 +15,10 @@
   
   <entry>
     <title type="html"><![CDATA[Meteor Learning Lesson2]]></title>
-    <link href="http://scootcho.github.io/blog/2014/07/23/meteor-learning-lesson2/"/>
-    <updated>2014-07-23T07:23:09+00:00</updated>
-    <id>http://scootcho.github.io/blog/2014/07/23/meteor-learning-lesson2</id>
-    <content type="html"><![CDATA[<!--more-->
-
-
-<p>Completed Lesson 2 of the <a href="https://www.youtube.com/playlist?list=PLKfAG4yMwKkRT4SVt_j04AnZSKcdYPFgx">Meteor Learning Playlist</a>. Below were some of the challenges I encountered and work arounds.</p>
+    <link href="http://scootcho.github.io/blog/2014/07/26/meteor-learning-lesson2/"/>
+    <updated>2014-07-26T13:08:43+08:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/26/meteor-learning-lesson2</id>
+    <content type="html"><![CDATA[<p>Completed Lesson 2 of the <a href="https://www.youtube.com/playlist?list=PLKfAG4yMwKkRT4SVt_j04AnZSKcdYPFgx">Meteor Learning Playlist</a>. Below were some of the challenges I encountered and work arounds.</p>
 
 <p>Problem: views did not render properly, instead of the views, it was rendering &ldquo;[object Object]&rdquo; in its place. After some digging around and help from people, it turns out that <code>Meteor.Router</code> is deprecated.</p>
 
@@ -33,11 +30,14 @@
 
 <p><code>mrt add iron-router</code></p>
 
+<!--more-->
+
+
 <p>Also replace the code associated with the old router:</p>
 
 <p>Instead of</p>
 
-<p>```javascript original
+<p>```javascript
 Meteor.Router.add({</p>
 
 <pre><code>'/':'homepage',
@@ -49,7 +49,7 @@ Meteor.Router.add({</p>
 
 <p>use this</p>
 
-<p>```javascript updated
+<p>```javascript
 Router.map( function () {
   this.route(&lsquo;homepage&rsquo;, {</p>
 
@@ -72,13 +72,13 @@ Router.map( function () {
   <entry>
     <title type="html"><![CDATA[Meteor JS]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/14/meteor-js/"/>
-    <updated>2014-07-14T05:54:13+00:00</updated>
+    <updated>2014-07-14T13:54:13+08:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/14/meteor-js</id>
     <content type="html"><![CDATA[<p>2 hrs</p>
 
 <p>I went to check out the <a href="http://www.innovatist.org/agile-code-camp/">Agile Code Camp</a> today, a JavaScript focused development code camp. The camp emphasizes on learning by building method and the goal is to collaborate and build as many projects for the duration of the camp. The class was split into 5 different groups and each group was asked to come up with an interesting idea to hack and collaborate on for the next 3 weeks.</p>
 
-<p>{% img center /images/posts/agilecodecamp.jpg %}</p>
+<p><img class="center" src="/images/posts/agilecodecamp.jpg"></p>
 
 <!--more-->
 
@@ -102,7 +102,7 @@ Router.map( function () {
   <entry>
     <title type="html"><![CDATA[Agile Code Camp]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/11/agile-code-camp/"/>
-    <updated>2014-07-11T03:14:11+00:00</updated>
+    <updated>2014-07-11T11:14:11+08:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/11/agile-code-camp</id>
     <content type="html"><![CDATA[<p>2 hrs</p>
 
@@ -115,7 +115,7 @@ Router.map( function () {
   <entry>
     <title type="html"><![CDATA[Codecademy JavaScript Wrap-up]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/10/codecademy-javascript-wrap-up/"/>
-    <updated>2014-07-10T02:09:02+00:00</updated>
+    <updated>2014-07-10T10:09:02+08:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/10/codecademy-javascript-wrap-up</id>
     <content type="html"><![CDATA[<p>4.5 hrs</p>
 
@@ -130,7 +130,7 @@ Router.map( function () {
   <entry>
     <title type="html"><![CDATA[Codecademy JavaScript Continue]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/08/codecademy-javascript-continue/"/>
-    <updated>2014-07-08T14:39:52+00:00</updated>
+    <updated>2014-07-08T22:39:52+08:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/08/codecademy-javascript-continue</id>
     <content type="html"><![CDATA[<p>3.5 hrs</p>
 
@@ -140,12 +140,14 @@ Router.map( function () {
 
 <p>Good thing is, I have already scoped out a couple of cool mini projects to build:</p>
 
-<p>{% codepen IHbvh jackrugile result 440 %}</p>
+<p><pre class="codepen" data-height="440" data-type="result" data-href="IHbvh" data-user="jackrugile"><code> </code></pre>
+<script async src="http://codepen.io:/assets/embed/ei.js"></script></p>
 
 <!--more-->
 
 
-<p>{% codepen sjcoa zerospree result 440 %}</p>
+<p><pre class="codepen" data-height="440" data-type="result" data-href="sjcoa" data-user="zerospree"><code> </code></pre>
+<script async src="http://codepen.io:/assets/embed/ei.js"></script></p>
 
 <p>I&rsquo;m looking forward to make some cool stuff. If you happen to see anything cool to build, please let me know! Thanks!</p>
 ]]></content>

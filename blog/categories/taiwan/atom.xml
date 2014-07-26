@@ -4,7 +4,7 @@
   <title><![CDATA[Category: taiwan | Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/blog/categories/taiwan/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-26T03:45:20+00:00</updated>
+  <updated>2014-07-26T13:15:14+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Taiwan Pitch Event]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/19/taiwan-pitch-event/"/>
-    <updated>2014-07-19T07:45:50+00:00</updated>
+    <updated>2014-07-19T15:45:50+08:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/19/taiwan-pitch-event</id>
     <content type="html"><![CDATA[<p>Today was the demo day/pitch event organized by <a href="https://www.facebook.com/iiinno.tw">IIINO Taiwan</a> at the Microsoft Taiwan Headquarters.</p>
 
@@ -24,14 +24,14 @@
 
 <p>There were some interesting startups. One I remember was Right On because the pitch was clear and concised. Right On is developing an event based application that aims to facilitate meetings at professionals events by providing searchable contacts.</p>
 
-<p>{% img center /images/posts/mspitch1.jpg %}</p>
+<p><img class="center" src="/images/posts/mspitch1.jpg"></p>
 
 <!--more-->
 
 
-<p>{% img center /images/posts/mspitch2.jpg %}
-{% img center /images/posts/mspitch3.jpg %}
-{% img center /images/posts/mspitch4.jpg %}
+<p><img class="center" src="/images/posts/mspitch2.jpg">
+<img class="center" src="/images/posts/mspitch3.jpg">
+<img class="center" src="/images/posts/mspitch4.jpg">
 <a href="https://www.facebook.com/iiinno.tw">source</a> (IIINO Taiwan)</p>
 
 <p>Congrats again to &ldquo;Iron Man Makers Group&rdquo; (I&rsquo;m not very good at translating :p ). The name has the word &ldquo;Iron Man&rdquo; in it because one of the projects they built was an Iron Man suit. Their vision is to utilize their combined skillsets in 3D design, printing, hardware and prototyping to create a platfomr that will help people realize their dreams and bring ideas to actual products. The vision reminds me of <a href="http://www.quirky.com/">Quirky</a> but for technology products.</p>
@@ -43,18 +43,18 @@
   <entry>
     <title type="html"><![CDATA[Taiwan Startup Meetup]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/09/taiwan-startup-meetup/"/>
-    <updated>2014-07-09T04:49:46+00:00</updated>
+    <updated>2014-07-09T12:49:46+08:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/09/taiwan-startup-meetup</id>
     <content type="html"><![CDATA[<p>1.5 hrs</p>
 
 <p>I didn&rsquo;t get to code too much today as I went to attend a <a href="http://www.meetup.com/taiwan-startup/events/192480802/">meetup event</a> in Taipei, hosted by <a href="http://iiinnolearn.weebly.com/">IIINNO</a>. There were handfull of pitches and one of them was <a href="http://between.us/en/">Between</a>, an app that focuses on sharing and commucation between couples. Between started in Korea and they have just raised $3M for Series A earlier this year. They&rsquo;re already in Japan and now expanding to Taiawn and a friend of mine is on the Taiwan team.</p>
 
-<p>{% img center /images/posts/between.jpg %}</p>
+<p><img class="center" src="/images/posts/between.jpg"></p>
 
 <!--more-->
 
 
-<p>{% img center /images/posts/twstartup.jpg %}</p>
+<p><img class="center" src="/images/posts/twstartup.jpg"></p>
 
 <p>I chatted up with some startup peeps including one of the guys from <a href="http://www.techinasia.com/taiwan-sentri-beasted-kickstarter-campaign-smart-home-internet-of-things-taiwan-startup/">Sentri</a>, a smart home security hardware designed for control and visibility of your home.</p>
 

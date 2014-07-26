@@ -5,12 +5,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>test - Assemblying Scottbot</title>
+	<title>Meteor Learning Lesson2 - Assemblying Scottbot</title>
 	<meta name="author" content="Scott Yu">
 
 	
-	<meta name="description" content="Test Some ruby preview review: Inject
-http://blog.jayfields.com/2008/03/ruby-inject.html Comments Please enable JavaScript to view the comments &hellip;">
+	<meta name="description" content="Meteor Learning Lesson2 Completed Lesson 2 of the Meteor Learning Playlist. Below were some of the challenges I encountered and work arounds. &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +19,7 @@ http://blog.jayfields.com/2008/03/ruby-inject.html Comments Please enable JavaSc
 
 	<link href="/atom.xml" rel="alternate" title="Assemblying Scottbot" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://scootcho.github.io/blog/2014/07/21/test/">
+	<link rel="canonical" href="http://scootcho.github.io/blog/2014/07/26/meteor-learning-lesson2/">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -100,11 +99,59 @@ http://blog.jayfields.com/2008/03/ruby-inject.html Comments Please enable JavaSc
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-	<h1 class="title" itemprop="name">Test</h1>
-	<div class="entry-content" itemprop="articleBody"><p>Some ruby preview</p>
+	<h1 class="title" itemprop="name">Meteor Learning Lesson2</h1>
+	<div class="entry-content" itemprop="articleBody"><p>Completed Lesson 2 of the <a href="https://www.youtube.com/playlist?list=PLKfAG4yMwKkRT4SVt_j04AnZSKcdYPFgx">Meteor Learning Playlist</a>. Below were some of the challenges I encountered and work arounds.</p>
 
-<p>review: Inject
-<a href="http://blog.jayfields.com/2008/03/ruby-inject.html">http://blog.jayfields.com/2008/03/ruby-inject.html</a></p>
+<p>Problem: views did not render properly, instead of the views, it was rendering &ldquo;[object Object]&rdquo; in its place. After some digging around and help from people, it turns out that <code>Meteor.Router</code> is deprecated.</p>
+
+<p>So instead of</p>
+
+<p><code>mrt add router</code></p>
+
+<p>do</p>
+
+<p><code>mrt add iron-router</code></p>
+
+<!--more-->
+
+
+<p>Also replace the code associated with the old router:</p>
+
+<p>Instead of</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">Meteor</span><span class="p">.</span><span class="nx">Router</span><span class="p">.</span><span class="nx">add</span><span class="p">({</span>
+</span><span class='line'>    <span class="s1">&#39;/&#39;</span><span class="o">:</span><span class="s1">&#39;homepage&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;/calendar&#39;</span><span class="o">:</span><span class="s1">&#39;calendar&#39;</span>
+</span><span class='line'><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>use this</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">Router</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">&#39;homepage&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/&#39;</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">&#39;calendar&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Views were rendering fine after the above update.</p>
+
+<p>There is also issue with the Modal, when the calendar is clicked, there were no popups. I&rsquo;ll update when I resolve this issue.</p>
+
+<p>Cheers!</p>
 </div>
 
 </article>
@@ -145,8 +192,8 @@ Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Sha
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://scootcho.github.io/blog/2014/07/21/test/';
-        var disqus_url = 'http://scootcho.github.io/blog/2014/07/21/test/';
+        var disqus_identifier = 'http://scootcho.github.io/blog/2014/07/26/meteor-learning-lesson2/';
+        var disqus_url = 'http://scootcho.github.io/blog/2014/07/26/meteor-learning-lesson2/';
         var disqus_script = 'embed.js';
       
     (function () {
