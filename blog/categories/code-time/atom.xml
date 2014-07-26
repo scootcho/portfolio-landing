@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: code time | Assemblying Scottbot]]></title>
+  <link href="http://scootcho.github.io/blog/categories/code-time/atom.xml" rel="self"/>
+  <link href="http://scootcho.github.io/"/>
+  <updated>2014-07-26T03:44:33+00:00</updated>
+  <id>http://scootcho.github.io/</id>
+  <author>
+    <name><![CDATA[Scott Yu]]></name>
+    <email><![CDATA[scott.tj.yu@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Meteor Learning]]></title>
+    <link href="http://scootcho.github.io/blog/2014/07/16/meteor-learning/"/>
+    <updated>2014-07-16T02:27:46+00:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/16/meteor-learning</id>
+    <content type="html"><![CDATA[<p>5 hrs</p>
+
+<p>I&rsquo;m aiming to wrap up the JavaScript Meteor Learning playlist on Youtube by the end of this week. So far my takeaway for Lesson 1.</p>
+
+<p>Lesson1:</p>
+
+<p>Key press events: keyup, keydown, focusup, key events</p>
+
+<p>Using &ldquo;Collection&rdquo; to create database. Capturing data and store in database.</p>
+]]></content>
+  </entry>
+  
+</feed>

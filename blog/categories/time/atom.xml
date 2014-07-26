@@ -4,7 +4,7 @@
   <title><![CDATA[Category: time | Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/blog/categories/time/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-24T03:40:08-04:00</updated>
+  <updated>2014-07-26T03:45:20+00:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -14,15 +14,71 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Meteor Learning Lesson2]]></title>
+    <link href="http://scootcho.github.io/blog/2014/07/23/meteor-learning-lesson2/"/>
+    <updated>2014-07-23T07:23:09+00:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/23/meteor-learning-lesson2</id>
+    <content type="html"><![CDATA[<!--more-->
+
+
+<p>Completed Lesson 2 of the <a href="https://www.youtube.com/playlist?list=PLKfAG4yMwKkRT4SVt_j04AnZSKcdYPFgx">Meteor Learning Playlist</a>. Below were some of the challenges I encountered and work arounds.</p>
+
+<p>Problem: views did not render properly, instead of the views, it was rendering &ldquo;[object Object]&rdquo; in its place. After some digging around and help from people, it turns out that <code>Meteor.Router</code> is deprecated.</p>
+
+<p>So instead of</p>
+
+<p><code>mrt add router</code></p>
+
+<p>do</p>
+
+<p><code>mrt add iron-router</code></p>
+
+<p>Also replace the code associated with the old router:</p>
+
+<p>Instead of</p>
+
+<p>```javascript original
+Meteor.Router.add({</p>
+
+<pre><code>'/':'homepage',
+'/calendar':'calendar'
+</code></pre>
+
+<p>})
+```</p>
+
+<p>use this</p>
+
+<p>```javascript updated
+Router.map( function () {
+  this.route(&lsquo;homepage&rsquo;, {</p>
+
+<pre><code>path: '/'
+</code></pre>
+
+<p>  });
+  this.route(&lsquo;calendar&rsquo;);
+});
+```</p>
+
+<p>Views were rendering fine after the above update.</p>
+
+<p>There is also issue with the Modal, when the calendar is clicked, there were no popups. I&rsquo;ll update when I resolve this issue.</p>
+
+<p>Cheers!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Meteor JS]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/14/meteor-js/"/>
-    <updated>2014-07-14T01:54:13-04:00</updated>
+    <updated>2014-07-14T05:54:13+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/14/meteor-js</id>
     <content type="html"><![CDATA[<p>2 hrs</p>
 
 <p>I went to check out the <a href="http://www.innovatist.org/agile-code-camp/">Agile Code Camp</a> today, a JavaScript focused development code camp. The camp emphasizes on learning by building method and the goal is to collaborate and build as many projects for the duration of the camp. The class was split into 5 different groups and each group was asked to come up with an interesting idea to hack and collaborate on for the next 3 weeks.</p>
 
-<p><img class="center" src="/images/posts/agilecodecamp.jpg"></p>
+<p>{% img center /images/posts/agilecodecamp.jpg %}</p>
 
 <!--more-->
 
@@ -46,7 +102,7 @@
   <entry>
     <title type="html"><![CDATA[Lesson 2: CSV &amp; Email - Continue]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/12/lesson-2-csv-and-email-continue/"/>
-    <updated>2014-07-12T01:51:09-04:00</updated>
+    <updated>2014-07-12T05:51:09+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/12/lesson-2-csv-and-email-continue</id>
     <content type="html"><![CDATA[<p>5 hrs</p>
 
@@ -103,7 +159,7 @@ console.log(&lsquo;Your bill is &rsquo;+cashRegister.total.toFixed(2));</p>
 <p>```
 CSV.open(&ldquo;my_results.csv&rdquo;, &ldquo;wb&rdquo;) do |csv|
   csv &lt;&lt; [&ldquo;firstname&rdquo;, &ldquo;lastname&rdquo;, &ldquo;phone&rdquo;, &ldquo;email&rdquo;]
-  csv &lt;&lt; [&ldquo;scott&rdquo;, &ldquo;yu&rdquo;, &ldquo;888-8888&rdquo;, &ldquo;<a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#x73;&#99;&#111;&#x74;&#x74;&#x40;&#114;&#x6f;&#98;&#111;&#x74;&#x73;&#x2e;&#99;&#x6f;&#109;">&#x73;&#99;&#111;&#x74;&#x74;&#x40;&#114;&#111;&#x62;&#x6f;&#x74;&#x73;&#x2e;&#99;&#111;&#x6d;</a>&rdquo;]
+  csv &lt;&lt; [&ldquo;scott&rdquo;, &ldquo;yu&rdquo;, &ldquo;888-8888&rdquo;, &ldquo;<a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#58;&#115;&#x63;&#111;&#116;&#x74;&#64;&#x72;&#x6f;&#x62;&#111;&#x74;&#115;&#46;&#x63;&#111;&#109;">&#115;&#99;&#111;&#116;&#116;&#x40;&#x72;&#111;&#x62;&#x6f;&#x74;&#115;&#x2e;&#x63;&#111;&#109;</a>&rdquo;]
 end</p>
 
 <p>```</p>
@@ -158,10 +214,10 @@ end</p>
 <p>@mailgun = Mailgun()</p>
 
 <p>parameters = {
-  :to => &ldquo;<a href="&#x6d;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#115;&#99;&#111;&#x74;&#x74;&#x40;&#114;&#x6f;&#98;&#x6f;&#x74;&#x2e;&#99;&#111;&#109;">&#115;&#99;&#x6f;&#116;&#x74;&#x40;&#114;&#111;&#98;&#x6f;&#x74;&#46;&#x63;&#x6f;&#109;</a>&rdquo;,
+  :to => &ldquo;<a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#115;&#99;&#111;&#116;&#116;&#x40;&#x72;&#111;&#98;&#x6f;&#116;&#46;&#x63;&#111;&#x6d;">&#115;&#x63;&#111;&#x74;&#x74;&#64;&#114;&#x6f;&#98;&#x6f;&#116;&#46;&#x63;&#111;&#x6d;</a>&rdquo;,
   :subject => &ldquo;Email from a robot&rdquo;,
   :text => &ldquo;Beep beep&hellip;beep..keep programming awesome stuff! Btw, NSA is watching!!&rdquo;,
-  :from => &ldquo;<a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#115;&#x63;&#111;&#x74;&#116;&#64;&#x73;&#x61;&#110;&#x64;&#x62;&#x6f;&#x78;&#49;&#50;&#51;&#52;&#53;&#x2e;&#x6d;&#97;&#x69;&#x6c;&#103;&#x75;&#x6e;&#46;&#111;&#114;&#103;">&#115;&#99;&#x6f;&#x74;&#x74;&#x40;&#x73;&#97;&#110;&#x64;&#98;&#x6f;&#120;&#x31;&#50;&#x33;&#x34;&#53;&#x2e;&#x6d;&#97;&#105;&#108;&#x67;&#117;&#x6e;&#46;&#x6f;&#114;&#103;</a>',
+  :from => &ldquo;<a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#115;&#99;&#111;&#x74;&#x74;&#64;&#x73;&#x61;&#110;&#x64;&#98;&#111;&#120;&#x31;&#50;&#51;&#52;&#53;&#x2e;&#x6d;&#97;&#105;&#x6c;&#103;&#117;&#x6e;&#x2e;&#x6f;&#114;&#x67;">&#x73;&#99;&#111;&#x74;&#116;&#x40;&#x73;&#x61;&#110;&#x64;&#98;&#111;&#120;&#49;&#x32;&#51;&#52;&#x35;&#x2e;&#109;&#97;&#x69;&#108;&#x67;&#x75;&#x6e;&#x2e;&#x6f;&#114;&#x67;</a>',
   :attachment => File.new(tweets)
 }
 @mailgun.messages.send_email(parameters)</p>
@@ -170,14 +226,14 @@ end</p>
 
 <p>Woot! I got the tweets attachment in my email!</p>
 
-<p><img class="center" src="/images/posts/tweetcsv.png"></p>
+<p>{% img center /images/posts/tweetcsv.png %}</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Lesson 2: CSV &amp; Email]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/12/lesson-2-csv-and-email/"/>
-    <updated>2014-07-12T01:04:52-04:00</updated>
+    <updated>2014-07-12T05:04:52+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/12/lesson-2-csv-and-email</id>
     <content type="html"><![CDATA[<p>2 hrs</p>
 
@@ -185,7 +241,18 @@ end</p>
 
 <p>The goal is to use the MailGun gem and write a simple script that can send emails. When I was trying to run <code>bundle exec ruby send_email.rb</code> I kept on getting the following error:</p>
 
-<p><blockquote><p>$ bundle exec ruby send_email.rb</p></p><p><p>/home/me/.gems/bundler/gems/mailgun-59455c20a860/lib/mailgun/base.rb:80:in `rescue in submit': Domain not found: <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#115;&#x63;&#111;&#x74;&#x74;&#x40;&#115;&#97;&#x6e;&#x64;&#98;&#111;&#120;&#x32;&#99;&#48;&#x32;&#x66;&#x38;&#48;&#x66;&#56;&#52;&#x38;&#x34;&#x34;&#55;&#x61;&#101;&#x38;&#99;&#x33;&#48;&#98;&#100;&#x36;&#102;&#50;&#x33;&#x32;&#x64;&#x31;&#x34;&#50;&#56;&#x2e;&#109;&#x61;&#105;&#x6c;&#103;&#x75;&#x6e;&#46;&#x6f;&#114;&#x67;">&#x73;&#x63;&#111;&#116;&#116;&#x40;&#115;&#97;&#x6e;&#x64;&#98;&#111;&#x78;&#50;&#x63;&#48;&#x32;&#x66;&#x38;&#x30;&#102;&#56;&#x34;&#x38;&#52;&#x34;&#x37;&#x61;&#101;&#x38;&#99;&#x33;&#x30;&#98;&#100;&#x36;&#x66;&#50;&#x33;&#x32;&#100;&#49;&#x34;&#x32;&#56;&#46;&#x6d;&#x61;&#105;&#108;&#103;&#117;&#x6e;&#46;&#x6f;&#x72;&#x67;</a> (Mailgun::Error)</p></p><p><p>from /home/me/.gems/bundler/gems/mailgun-59455c20a860/lib/mailgun/base.rb:69:in `submit'</p></p><p><p>from /home/me/.gems/bundler/gems/mailgun-59455c20a860/lib/mailgun/message.rb:18:in `send_email'</p></p><p><p>from send_email.rb:20:in `<main>'</p></p><p><p></p></blockquote></p>
+<p>{% blockquote %}
+$ bundle exec ruby send_email.rb</p>
+
+<p>/home/me/.gems/bundler/gems/mailgun-59455c20a860/lib/mailgun/base.rb:80:in `rescue in submit': Domain not found: <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#x73;&#x63;&#x6f;&#x74;&#x74;&#x40;&#x73;&#x61;&#110;&#x64;&#x62;&#111;&#120;&#x32;&#99;&#48;&#50;&#102;&#x38;&#x30;&#x66;&#56;&#x34;&#56;&#x34;&#52;&#55;&#x61;&#101;&#56;&#x63;&#x33;&#x30;&#98;&#100;&#54;&#102;&#x32;&#x33;&#50;&#x64;&#x31;&#52;&#x32;&#56;&#x2e;&#x6d;&#97;&#x69;&#x6c;&#x67;&#117;&#x6e;&#46;&#111;&#114;&#103;">&#x73;&#99;&#111;&#x74;&#x74;&#64;&#x73;&#x61;&#110;&#x64;&#x62;&#111;&#x78;&#50;&#x63;&#48;&#50;&#102;&#56;&#x30;&#102;&#x38;&#52;&#x38;&#52;&#52;&#55;&#x61;&#x65;&#x38;&#x63;&#51;&#x30;&#98;&#x64;&#54;&#102;&#50;&#x33;&#50;&#100;&#x31;&#52;&#x32;&#x38;&#x2e;&#x6d;&#x61;&#105;&#x6c;&#x67;&#117;&#110;&#x2e;&#x6f;&#x72;&#103;</a> (Mailgun::Error)</p>
+
+<p>from /home/me/.gems/bundler/gems/mailgun-59455c20a860/lib/mailgun/base.rb:69:in `submit'</p>
+
+<p>from /home/me/.gems/bundler/gems/mailgun-59455c20a860/lib/mailgun/message.rb:18:in `send_email'</p>
+
+<p>from send_email.rb:20:in `<main>'</p>
+
+<p>{% endblockquote %}</p>
 
 <p>Here is my ruby script:</p>
 
@@ -194,20 +261,20 @@ require &lsquo;mailgun&rsquo;</p>
 
 <p>Mailgun.configure do |config|
   config.api_key = &lsquo;private-API-key-XXXXXXXXXXXXXXXX&rsquo;
-  config.domain  = &lsquo;<a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x70;&#111;&#115;&#x74;&#x40;&#x73;&#97;&#x6e;&#x64;&#x62;&#111;&#x78;&#x31;&#x32;&#x33;&#x34;&#53;&#x2e;&#x6d;&#x61;&#x69;&#x6c;&#103;&#117;&#x6e;&#x2e;&#x6f;&#x72;&#103;">&#112;&#111;&#x73;&#116;&#64;&#115;&#x61;&#110;&#100;&#98;&#x6f;&#x78;&#49;&#x32;&#x33;&#52;&#53;&#46;&#109;&#x61;&#105;&#x6c;&#x67;&#x75;&#x6e;&#x2e;&#111;&#114;&#x67;</a>&rsquo;
+  config.domain  = &lsquo;<a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x70;&#111;&#x73;&#x74;&#x40;&#x73;&#97;&#x6e;&#100;&#98;&#111;&#x78;&#49;&#x32;&#51;&#52;&#53;&#x2e;&#109;&#x61;&#x69;&#x6c;&#103;&#x75;&#110;&#46;&#111;&#x72;&#x67;">&#x70;&#111;&#x73;&#x74;&#64;&#115;&#97;&#x6e;&#100;&#x62;&#x6f;&#x78;&#x31;&#50;&#x33;&#52;&#53;&#x2e;&#x6d;&#97;&#x69;&#108;&#x67;&#117;&#110;&#46;&#111;&#114;&#103;</a>&rsquo;
 end</p>
 
 <p>@mailgun = Mailgun()</p>
 
 <p>parameters = {
-  :to => &ldquo;<a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#115;&#x63;&#x6f;&#x74;&#x74;&#64;&#114;&#111;&#x62;&#x6f;&#116;&#x2e;&#99;&#111;&#x6d;">&#115;&#x63;&#111;&#x74;&#116;&#x40;&#x72;&#x6f;&#98;&#x6f;&#x74;&#x2e;&#99;&#x6f;&#x6d;</a>&rdquo;,
+  :to => &ldquo;<a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#58;&#x73;&#x63;&#x6f;&#x74;&#116;&#64;&#114;&#111;&#98;&#x6f;&#116;&#46;&#99;&#x6f;&#109;">&#x73;&#x63;&#x6f;&#x74;&#x74;&#x40;&#114;&#x6f;&#x62;&#x6f;&#x74;&#46;&#x63;&#x6f;&#x6d;</a>&rdquo;,
   :subject => &ldquo;Email from a robot&rdquo;,
   :text => &ldquo;Beep beep&hellip;beep..keep programming awesome stuff!</p>
 
 <pre><code>        Btw, NSA is watching!!",
 </code></pre>
 
-<p>  :from => &ldquo;<a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#x73;&#x63;&#111;&#x74;&#x74;&#x40;&#x73;&#x61;&#110;&#x64;&#98;&#111;&#120;&#x31;&#50;&#x33;&#52;&#53;&#x2e;&#x6d;&#97;&#x69;&#x6c;&#x67;&#117;&#x6e;&#x2e;&#111;&#114;&#103;">&#115;&#x63;&#111;&#116;&#116;&#x40;&#115;&#x61;&#x6e;&#100;&#98;&#x6f;&#x78;&#49;&#50;&#x33;&#52;&#53;&#x2e;&#x6d;&#97;&#x69;&#108;&#x67;&#117;&#110;&#46;&#x6f;&#114;&#103;</a>&rdquo;
+<p>  :from => &ldquo;<a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#99;&#111;&#116;&#x74;&#x40;&#115;&#97;&#x6e;&#100;&#98;&#x6f;&#x78;&#x31;&#50;&#x33;&#x34;&#53;&#x2e;&#109;&#97;&#105;&#x6c;&#x67;&#117;&#110;&#x2e;&#111;&#114;&#103;">&#x73;&#99;&#111;&#x74;&#116;&#x40;&#115;&#x61;&#110;&#100;&#x62;&#111;&#x78;&#49;&#x32;&#x33;&#52;&#53;&#x2e;&#x6d;&#97;&#105;&#x6c;&#103;&#x75;&#x6e;&#46;&#x6f;&#114;&#103;</a>&rdquo;
 }
 @mailgun.messages.send_email(parameters)
 ```
@@ -234,7 +301,7 @@ end
 
 <p>After I changed that everything went smoothly! I just sent myself an email warning about the NSA!!</p>
 
-<p><img class="center" src="/images/posts/emailsn.png"></p>
+<p>{% img center /images/posts/emailsn.png %}</p>
 
 <p>What other interesting things are you doing with emailing scripts?</p>
 ]]></content>
@@ -242,29 +309,14 @@ end
   
   <entry>
     <title type="html"><![CDATA[Agile Code Camp]]></title>
-    <link href="http://scootcho.github.io/blog/2014/07/10/agile-code-camp/"/>
-    <updated>2014-07-10T23:14:11-04:00</updated>
-    <id>http://scootcho.github.io/blog/2014/07/10/agile-code-camp</id>
+    <link href="http://scootcho.github.io/blog/2014/07/11/agile-code-camp/"/>
+    <updated>2014-07-11T03:14:11+00:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/11/agile-code-camp</id>
     <content type="html"><![CDATA[<p>2 hrs</p>
 
 <p>While at the <a href="/blog/2014/07/09/taiwan-startup-meetup/">Taiwan startup meetup</a> a couple of days ago, I expressed my interests in learning coding and checking out some local groups. One awesome guy told me about <a href="http://www.innovatist.org/agile-code-camp/">Agile Code Camp</a>, a free JavaScript development course that practice Agile Development and uses Meteor as web development framework.</p>
 
 <p>I will update once I check out the program! Cheers!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Codecademy JavaScript Wrap-up]]></title>
-    <link href="http://scootcho.github.io/blog/2014/07/09/codecademy-javascript-wrap-up/"/>
-    <updated>2014-07-09T22:09:02-04:00</updated>
-    <id>http://scootcho.github.io/blog/2014/07/09/codecademy-javascript-wrap-up</id>
-    <content type="html"><![CDATA[<p>4.5 hrs</p>
-
-<p>I&rsquo;m almost done with the <a href="http://www.codecademy.com/tracks/javascript">JavaScript Track</a> (@86%), and I&rsquo;m planning to wrap that up with 1-2 more hrs. I feel my foundation is getting a better. This should get me a littler further for more JavaScript codes but I&rsquo;m planning to read a book to emphasize on foundations. After all, to be able to understand and use a language, a solid foundation will make one more fluent. Since I think I will be using JavaScript long time down the road, it should be a great investment of my time.</p>
-
-<p>I was debating on either reading <a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742/ref=sr_1_4?s=books&amp;ie=UTF8&amp;qid=1405306938&amp;sr=1-4">JavaScript: The Good Parts &ndash; Douglas Crockford</a> or <a href="http://www.amazon.com/JavaScript-Definitive-Guide-Activate-Guides/dp/0596805527/ref=pd_sim_b_2?ie=UTF8&amp;refRID=0GC85FDHB3N7X62FY8PN">JavaScript: The Definitive Guide &ndash; David Flanagan</a>. The latter covers JavaScript in great detail and a great reference guide, but being a litte over 1000 pages long. After reading a <a href="http://www.gamefromscratch.com/post/2012/03/23/A-tale-of-two-Javascript-books.aspx">comparision</a>, and knowing the pros and cons of the two, I&rsquo;ve decided to read the <a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742/ref=sr_1_4?s=books&amp;ie=UTF8&amp;qid=1405306938&amp;sr=1-4">The Good Parts</a> first to give a jump start and I&rsquo;ll cover BIG BOOK later.</p>
-
-<p>If you have any good reading recommendations, please let me know! Thanks!</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails taipei | Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/blog/categories/rails-taipei/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-24T03:40:08-04:00</updated>
+  <updated>2014-07-26T03:45:20+00:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -16,22 +16,22 @@
   <entry>
     <title type="html"><![CDATA[Taipei Rails Meetup]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/15/taipei-rails-meetup/"/>
-    <updated>2014-07-15T01:52:59-04:00</updated>
+    <updated>2014-07-15T05:52:59+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/15/taipei-rails-meetup</id>
     <content type="html"><![CDATA[<p>I dropped by at the <a href="http://www.meetup.com/rails-taiwan/">Taipei Rails Meetup</a> today. I want to meet people who are also into Rails because it&rsquo;s always more fun to build things with people and learn from one another.</p>
 
 <p>This was an &lsquo;installfest&rsquo; meetup, to make sure everybody has their machine enviornments setup for the classes in the upcoming weeks. I already had my ubuntu virtualbox setup a while back so I ended up chatting with some peeps.</p>
 
-<p><img class="center" src="/images/posts/tprails1.jpg"></p>
+<p>{% img center /images/posts/tprails1.jpg %}</p>
 
 <!--more-->
 
 
 <p>I found out that one of the mentors here, &lsquo;xdite&rsquo; had actually written a <a href="https://leanpub.com/rails-101">book</a> on Rails, called <a href="https://leanpub.com/rails-101">Rails 101</a>. It&rsquo;s in traditional Chinese so if you can read it, check it out! You can download the <a href="https://leanpub.com/rails-101/packages/book/purchases/new">Rails 101 ebook</a> for <strong>free</strong> on leanpub. All you need to do is set the price to <strong>$0</strong> under the <em>&ldquo;Name Your Price&rdquo;</em> section. Of course, buying and donating to the author is more than welcome!</p>
 
-<p><img class="center" src="/images/posts/tprails2.jpg"></p>
+<p>{% img center /images/posts/tprails2.jpg %}</p>
 
-<p><img class="center" src="/images/posts/tprails3.jpg"></p>
+<p>{% img center /images/posts/tprails3.jpg %}</p>
 ]]></content>
   </entry>
   

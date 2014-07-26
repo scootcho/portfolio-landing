@@ -4,7 +4,7 @@
   <title><![CDATA[Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-24T03:40:08-04:00</updated>
+  <updated>2014-07-26T03:37:48+00:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -14,9 +14,58 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Meteor Learning Lesson2]]></title>
+    <link href="http://scootcho.github.io/blog/2014/07/24/meteor-learning-lesson2/"/>
+    <updated>2014-07-24T07:23:09+00:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/24/meteor-learning-lesson2</id>
+    <content type="html"><![CDATA[<p>problems won&rsquo;t render correctly</p>
+
+<p> Meteor.Router is deprecated</p>
+
+<p>before that you have to add the package &ldquo;iron-router&rdquo;</p>
+
+<p>&ldquo;mrt add iron-router&rdquo;</p>
+
+<p>Instead of</p>
+
+<p>Meteor.Router.add({</p>
+
+<pre><code>'/':'homepage',
+'/calendar':'calendar'
+</code></pre>
+
+<p>})</p>
+
+<p>use this</p>
+
+<p>Router.map( function () {
+  this.route(&lsquo;homepage&rsquo;, {</p>
+
+<pre><code>path: '/'
+</code></pre>
+
+<p>  });
+  this.route(&lsquo;calendar&rsquo;);
+});</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[test]]></title>
+    <link href="http://scootcho.github.io/blog/2014/07/21/test/"/>
+    <updated>2014-07-21T07:51:58+00:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/21/test</id>
+    <content type="html"><![CDATA[<p>Some ruby preview</p>
+
+<p>review: Inject
+<a href="http://blog.jayfields.com/2008/03/ruby-inject.html">http://blog.jayfields.com/2008/03/ruby-inject.html</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Taiwan Pitch Event]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/19/taiwan-pitch-event/"/>
-    <updated>2014-07-19T03:45:50-04:00</updated>
+    <updated>2014-07-19T07:45:50+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/19/taiwan-pitch-event</id>
     <content type="html"><![CDATA[<p>Today was the demo day/pitch event organized by <a href="https://www.facebook.com/iiinno.tw">IIINO Taiwan</a> at the Microsoft Taiwan Headquarters.</p>
 
@@ -41,9 +90,35 @@
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[Meteor Learning Lesson1]]></title>
+    <link href="http://scootcho.github.io/blog/2014/07/18/meteor-learning-lesson1/"/>
+    <updated>2014-07-18T02:30:28+00:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/18/meteor-learning-lesson1</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Meteor Learning]]></title>
+    <link href="http://scootcho.github.io/blog/2014/07/16/meteor-learning/"/>
+    <updated>2014-07-16T02:27:46+00:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/16/meteor-learning</id>
+    <content type="html"><![CDATA[<p>5 hrs</p>
+
+<p>I&rsquo;m aiming to wrap up the JavaScript Meteor Learning playlist on Youtube by the end of this week. So far my takeaway for Lesson 1.</p>
+
+<p>Lesson1:</p>
+
+<p>Key press events: keyup, keydown, focusup, key events</p>
+
+<p>Using &ldquo;Collection&rdquo; to create database. Capturing data and store in database.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Taipei Rails Meetup]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/15/taipei-rails-meetup/"/>
-    <updated>2014-07-15T01:52:59-04:00</updated>
+    <updated>2014-07-15T05:52:59+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/15/taipei-rails-meetup</id>
     <content type="html"><![CDATA[<p>I dropped by at the <a href="http://www.meetup.com/rails-taiwan/">Taipei Rails Meetup</a> today. I want to meet people who are also into Rails because it&rsquo;s always more fun to build things with people and learn from one another.</p>
 
@@ -65,7 +140,7 @@
   <entry>
     <title type="html"><![CDATA[Meteor JS]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/14/meteor-js/"/>
-    <updated>2014-07-14T01:54:13-04:00</updated>
+    <updated>2014-07-14T05:54:13+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/14/meteor-js</id>
     <content type="html"><![CDATA[<p>2 hrs</p>
 
@@ -95,7 +170,7 @@
   <entry>
     <title type="html"><![CDATA[Lesson 2: CSV &amp; Email - Continue]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/12/lesson-2-csv-and-email-continue/"/>
-    <updated>2014-07-12T01:51:09-04:00</updated>
+    <updated>2014-07-12T05:51:09+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/12/lesson-2-csv-and-email-continue</id>
     <content type="html"><![CDATA[<p>5 hrs</p>
 
@@ -291,7 +366,7 @@
   <entry>
     <title type="html"><![CDATA[Lesson 2: CSV &amp; Email]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/12/lesson-2-csv-and-email/"/>
-    <updated>2014-07-12T01:04:52-04:00</updated>
+    <updated>2014-07-12T05:04:52+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/12/lesson-2-csv-and-email</id>
     <content type="html"><![CDATA[<p>2 hrs</p>
 
@@ -381,9 +456,9 @@
   
   <entry>
     <title type="html"><![CDATA[Agile Code Camp]]></title>
-    <link href="http://scootcho.github.io/blog/2014/07/10/agile-code-camp/"/>
-    <updated>2014-07-10T23:14:11-04:00</updated>
-    <id>http://scootcho.github.io/blog/2014/07/10/agile-code-camp</id>
+    <link href="http://scootcho.github.io/blog/2014/07/11/agile-code-camp/"/>
+    <updated>2014-07-11T03:14:11+00:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/11/agile-code-camp</id>
     <content type="html"><![CDATA[<p>2 hrs</p>
 
 <p>While at the <a href="http://scootcho.github.io/blog/2014/07/09/taiwan-startup-meetup/">Taiwan startup meetup</a> a couple of days ago, I expressed my interests in learning coding and checking out some local groups. One awesome guy told me about <a href="http://www.innovatist.org/agile-code-camp/">Agile Code Camp</a>, a free JavaScript development course that practice Agile Development and uses Meteor as web development framework.</p>
@@ -394,9 +469,9 @@
   
   <entry>
     <title type="html"><![CDATA[Codecademy JavaScript Wrap-up]]></title>
-    <link href="http://scootcho.github.io/blog/2014/07/09/codecademy-javascript-wrap-up/"/>
-    <updated>2014-07-09T22:09:02-04:00</updated>
-    <id>http://scootcho.github.io/blog/2014/07/09/codecademy-javascript-wrap-up</id>
+    <link href="http://scootcho.github.io/blog/2014/07/10/codecademy-javascript-wrap-up/"/>
+    <updated>2014-07-10T02:09:02+00:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/10/codecademy-javascript-wrap-up</id>
     <content type="html"><![CDATA[<p>4.5 hrs</p>
 
 <p>I&rsquo;m almost done with the <a href="http://www.codecademy.com/tracks/javascript">JavaScript Track</a> (@86%), and I&rsquo;m planning to wrap that up with 1-2 more hrs. I feel my foundation is getting a better. This should get me a littler further for more JavaScript codes but I&rsquo;m planning to read a book to emphasize on foundations. After all, to be able to understand and use a language, a solid foundation will make one more fluent. Since I think I will be using JavaScript long time down the road, it should be a great investment of my time.</p>
@@ -410,7 +485,7 @@
   <entry>
     <title type="html"><![CDATA[Taiwan Startup Meetup]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/09/taiwan-startup-meetup/"/>
-    <updated>2014-07-09T00:49:46-04:00</updated>
+    <updated>2014-07-09T04:49:46+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/09/taiwan-startup-meetup</id>
     <content type="html"><![CDATA[<p>1.5 hrs</p>
 
@@ -434,7 +509,7 @@
   <entry>
     <title type="html"><![CDATA[Codecademy JavaScript Continue]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/08/codecademy-javascript-continue/"/>
-    <updated>2014-07-08T10:39:52-04:00</updated>
+    <updated>2014-07-08T14:39:52+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/08/codecademy-javascript-continue</id>
     <content type="html"><![CDATA[<p>3.5 hrs</p>
 
@@ -470,7 +545,7 @@
   <entry>
     <title type="html"><![CDATA[Open Source Cloud &amp; Desktop IDE]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/04/open-source-cloud-and-desktop-ide/"/>
-    <updated>2014-07-04T03:08:47-04:00</updated>
+    <updated>2014-07-04T07:08:47+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/04/open-source-cloud-and-desktop-ide</id>
     <content type="html"><![CDATA[<p>I came across <a href="https://github.com/FriendCode/codebox">Codebox IDE</a> an open source cloud IDE because a project I&rsquo;m working on is using it as the cloud development enviornment.</p>
 
@@ -489,9 +564,9 @@
   
   <entry>
     <title type="html"><![CDATA[Lesson 1: Twitter API]]></title>
-    <link href="http://scootcho.github.io/blog/2014/07/02/lesson-1-twitter-api/"/>
-    <updated>2014-07-02T22:38:17-04:00</updated>
-    <id>http://scootcho.github.io/blog/2014/07/02/lesson-1-twitter-api</id>
+    <link href="http://scootcho.github.io/blog/2014/07/03/lesson-1-twitter-api/"/>
+    <updated>2014-07-03T02:38:17+00:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/03/lesson-1-twitter-api</id>
     <content type="html"><![CDATA[<p>2 hrs</p>
 
 <p>Today I received the first lesson from the <a href="https://www.makeitwithcode.com">MakeItWithCode</a> team. The lesson briefly covers some basics for beginners such as linux commands and run <code>bundle</code> to install Ruby gems. But the emphasis of this course is to build things so it dives striaght into the <a href="https://github.com/sferik/twitter">Twitter Ruby Gem</a>, which I like.</p>
@@ -599,7 +674,7 @@
   <entry>
     <title type="html"><![CDATA[Codecademy JavaScript]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/02/codecademy-javascript/"/>
-    <updated>2014-07-02T10:38:09-04:00</updated>
+    <updated>2014-07-02T14:38:09+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/02/codecademy-javascript</id>
     <content type="html"><![CDATA[<p>4 hrs</p>
 
@@ -719,7 +794,7 @@
   <entry>
     <title type="html"><![CDATA[Good Times Ahead!]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/01/good-times-ahead/"/>
-    <updated>2014-07-01T06:29:51-04:00</updated>
+    <updated>2014-07-01T10:29:51+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/01/good-times-ahead</id>
     <content type="html"><![CDATA[<p>Tomorrow, I will be starting the 10 week programming curriculumn at <a href="https://www.makeitwithcode.com">MakeItWithCode</a>. I will document my learning process here to help myself clarify and understand some concepts. Oh yea, and for memorization too because I have a terrible, terrible memory.</p>
 
@@ -788,7 +863,7 @@ Data is of limited use when it&rsquo;s stuck within the Terminal. In this lesson
   <entry>
     <title type="html"><![CDATA[Javascript Range Slider]]></title>
     <link href="http://scootcho.github.io/blog/2014/06/30/javascript-range-slider/"/>
-    <updated>2014-06-30T11:46:07-04:00</updated>
+    <updated>2014-06-30T15:46:07+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/06/30/javascript-range-slider</id>
     <content type="html"><![CDATA[<p>3.5 hrs</p>
 
@@ -817,7 +892,7 @@ Data is of limited use when it&rsquo;s stuck within the Terminal. In this lesson
   <entry>
     <title type="html"><![CDATA[More Ruby Review]]></title>
     <link href="http://scootcho.github.io/blog/2014/06/29/more-ruby-review/"/>
-    <updated>2014-06-29T11:30:50-04:00</updated>
+    <updated>2014-06-29T15:30:50+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/06/29/more-ruby-review</id>
     <content type="html"><![CDATA[<p>5 hrs</p>
 
@@ -977,7 +1052,7 @@ Data is of limited use when it&rsquo;s stuck within the Terminal. In this lesson
   <entry>
     <title type="html"><![CDATA[Some Ruby Review]]></title>
     <link href="http://scootcho.github.io/blog/2014/06/28/some-ruby-review/"/>
-    <updated>2014-06-28T09:35:24-04:00</updated>
+    <updated>2014-06-28T13:35:24+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/06/28/some-ruby-review</id>
     <content type="html"><![CDATA[<p>2.5 hrs</p>
 
@@ -1061,24 +1136,6 @@ Data is of limited use when it&rsquo;s stuck within the Terminal. In this lesson
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Back to the Bay]]></title>
-    <link href="http://scootcho.github.io/blog/2014/06/12/back-to-the-bay/"/>
-    <updated>2014-06-12T20:15:48-04:00</updated>
-    <id>http://scootcho.github.io/blog/2014/06/12/back-to-the-bay</id>
-    <content type="html"><![CDATA[<p>I almost forgot how fresh and crisp the air is in San Francisco! After spending 9 months with the team in South East Asia, I can&rsquo;t say I miss the humidity one bit.</p>
-
-<p>Since we&rsquo;re a small team, I&rsquo;m doing various things ranging from business development to cleaning the toilet (no, literally). But one of the things I enjoy the most is contributing to our web application!</p>
-
-<!--more-->
-
-
-<p>Although my background is in Finance, I&rsquo;ve always had an interest in tech and I was learning some front-end things on my own. When I got the chance to design the responsive email template, I was stoked! Although, the code is nothing worth mentioning, and the design was pieced together from different sources, it was still empowering to see the work going out to our customers in the real world.</p>
-
-<p>I was hooked! Since then, I&rsquo;ve been taking oneline courses on my spare time. My goal is to become a better coder so I can help build cool things. Currently, I&rsquo;m learning the Ruby language, Rails framework, and Javascript. I will document my learning process here so one day I can look back and say to myself, &ldquo;hey, you&rsquo;ve come a long way!&rdquo;</p>
 ]]></content>
   </entry>
   

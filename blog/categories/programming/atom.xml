@@ -4,7 +4,7 @@
   <title><![CDATA[Category: programming | Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-24T03:40:08-04:00</updated>
+  <updated>2014-07-26T03:45:20+00:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Lesson 1: Twitter API]]></title>
-    <link href="http://scootcho.github.io/blog/2014/07/02/lesson-1-twitter-api/"/>
-    <updated>2014-07-02T22:38:17-04:00</updated>
-    <id>http://scootcho.github.io/blog/2014/07/02/lesson-1-twitter-api</id>
+    <link href="http://scootcho.github.io/blog/2014/07/03/lesson-1-twitter-api/"/>
+    <updated>2014-07-03T02:38:17+00:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/03/lesson-1-twitter-api</id>
     <content type="html"><![CDATA[<p>2 hrs</p>
 
 <p>Today I received the first lesson from the <a href="https://www.makeitwithcode.com">MakeItWithCode</a> team. The lesson briefly covers some basics for beginners such as linux commands and run <code>bundle</code> to install Ruby gems. But the emphasis of this course is to build things so it dives striaght into the <a href="https://github.com/sferik/twitter">Twitter Ruby Gem</a>, which I like.</p>
@@ -100,7 +100,7 @@ end
   <entry>
     <title type="html"><![CDATA[Good Times Ahead!]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/01/good-times-ahead/"/>
-    <updated>2014-07-01T06:29:51-04:00</updated>
+    <updated>2014-07-01T10:29:51+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/01/good-times-ahead</id>
     <content type="html"><![CDATA[<p>Tomorrow, I will be starting the 10 week programming curriculumn at <a href="https://www.makeitwithcode.com">MakeItWithCode</a>. I will document my learning process here to help myself clarify and understand some concepts. Oh yea, and for memorization too because I have a terrible, terrible memory.</p>
 
@@ -169,7 +169,7 @@ Data is of limited use when it&rsquo;s stuck within the Terminal. In this lesson
   <entry>
     <title type="html"><![CDATA[More Ruby Review]]></title>
     <link href="http://scootcho.github.io/blog/2014/06/29/more-ruby-review/"/>
-    <updated>2014-06-29T11:30:50-04:00</updated>
+    <updated>2014-06-29T15:30:50+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/06/29/more-ruby-review</id>
     <content type="html"><![CDATA[<p>5 hrs</p>
 
@@ -273,7 +273,7 @@ when &lsquo;add&rsquo;</p>
   <entry>
     <title type="html"><![CDATA[Some Ruby Review]]></title>
     <link href="http://scootcho.github.io/blog/2014/06/28/some-ruby-review/"/>
-    <updated>2014-06-28T09:35:24-04:00</updated>
+    <updated>2014-06-28T13:35:24+00:00</updated>
     <id>http://scootcho.github.io/blog/2014/06/28/some-ruby-review</id>
     <content type="html"><![CDATA[<p>2.5 hrs</p>
 
@@ -329,9 +329,9 @@ hash = Hash.new(&ldquo;notnil&rdquo;)</p>
   
   <entry>
     <title type="html"><![CDATA[Back to the Bay]]></title>
-    <link href="http://scootcho.github.io/blog/2014/06/12/back-to-the-bay/"/>
-    <updated>2014-06-12T20:15:48-04:00</updated>
-    <id>http://scootcho.github.io/blog/2014/06/12/back-to-the-bay</id>
+    <link href="http://scootcho.github.io/blog/2014/06/13/back-to-the-bay/"/>
+    <updated>2014-06-13T00:15:48+00:00</updated>
+    <id>http://scootcho.github.io/blog/2014/06/13/back-to-the-bay</id>
     <content type="html"><![CDATA[<p>I almost forgot how fresh and crisp the air is in San Francisco! After spending 9 months with the team in South East Asia, I can&rsquo;t say I miss the humidity one bit.</p>
 
 <p>Since we&rsquo;re a small team, I&rsquo;m doing various things ranging from business development to cleaning the toilet (no, literally). But one of the things I enjoy the most is contributing to our web application!</p>
