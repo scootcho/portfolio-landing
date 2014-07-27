@@ -4,7 +4,7 @@
   <title><![CDATA[Category: agile code camp | Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/blog/categories/agile-code-camp/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-26T13:22:20+08:00</updated>
+  <updated>2014-07-27T12:11:02+08:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Meteor Learning Lesson2]]></title>
-    <link href="http://scootcho.github.io/blog/2014/07/26/meteor-learning-lesson2/"/>
-    <updated>2014-07-26T13:08:43+08:00</updated>
-    <id>http://scootcho.github.io/blog/2014/07/26/meteor-learning-lesson2</id>
+    <link href="http://scootcho.github.io/blog/2014/07/23/meteor-learning-lesson2/"/>
+    <updated>2014-07-23T13:08:43+08:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/23/meteor-learning-lesson2</id>
     <content type="html"><![CDATA[<p>Completed Lesson 2 of the <a href="https://www.youtube.com/playlist?list=PLKfAG4yMwKkRT4SVt_j04AnZSKcdYPFgx">Meteor Learning Playlist</a>. Below were some of the challenges I encountered and work arounds.</p>
 
 <p>Problem: views did not render properly, instead of the views, it was rendering &ldquo;[object Object]&rdquo; in its place. After some digging around and help from people, it turns out that <code>Meteor.Router</code> is deprecated.</p>
