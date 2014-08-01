@@ -4,7 +4,7 @@
   <title><![CDATA[Category: code | Assemblying Scottbot]]></title>
   <link href="http://scootcho.github.io/blog/categories/code/atom.xml" rel="self"/>
   <link href="http://scootcho.github.io/"/>
-  <updated>2014-07-31T12:02:07+08:00</updated>
+  <updated>2014-08-01T00:47:01-07:00</updated>
   <id>http://scootcho.github.io/</id>
   <author>
     <name><![CDATA[Scott Yu]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Meteor Learning Lesson2]]></title>
-    <link href="http://scootcho.github.io/blog/2014/07/23/meteor-learning-lesson2/"/>
-    <updated>2014-07-23T13:08:43+08:00</updated>
-    <id>http://scootcho.github.io/blog/2014/07/23/meteor-learning-lesson2</id>
+    <link href="http://scootcho.github.io/blog/2014/07/25/meteor-learning-lesson2/"/>
+    <updated>2014-07-25T22:08:43-07:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/25/meteor-learning-lesson2</id>
     <content type="html"><![CDATA[<p>Completed Lesson 2 of the <a href="https://www.youtube.com/playlist?list=PLKfAG4yMwKkRT4SVt_j04AnZSKcdYPFgx">Meteor Learning Playlist</a>. Below were some of the challenges I encountered and work arounds.</p>
 
 <p>Problem: views did not render properly, instead of the views, it was rendering &ldquo;[object Object]&rdquo; in its place. After some digging around and help from people, it turns out that <code>Meteor.Router</code> is deprecated.</p>
@@ -71,9 +71,9 @@ Router.map( function () {
   
   <entry>
     <title type="html"><![CDATA[Meteor JS]]></title>
-    <link href="http://scootcho.github.io/blog/2014/07/14/meteor-js/"/>
-    <updated>2014-07-14T13:54:13+08:00</updated>
-    <id>http://scootcho.github.io/blog/2014/07/14/meteor-js</id>
+    <link href="http://scootcho.github.io/blog/2014/07/13/meteor-js/"/>
+    <updated>2014-07-13T22:54:13-07:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/13/meteor-js</id>
     <content type="html"><![CDATA[<p>2 hrs</p>
 
 <p>I went to check out the <a href="http://www.innovatist.org/agile-code-camp/">Agile Code Camp</a> today, a JavaScript focused development code camp. The camp emphasizes on learning by building method and the goal is to collaborate and build as many projects for the duration of the camp. The class was split into 5 different groups and each group was asked to come up with an interesting idea to hack and collaborate on for the next 3 weeks.</p>
@@ -101,9 +101,9 @@ Router.map( function () {
   
   <entry>
     <title type="html"><![CDATA[Agile Code Camp]]></title>
-    <link href="http://scootcho.github.io/blog/2014/07/11/agile-code-camp/"/>
-    <updated>2014-07-11T11:14:11+08:00</updated>
-    <id>http://scootcho.github.io/blog/2014/07/11/agile-code-camp</id>
+    <link href="http://scootcho.github.io/blog/2014/07/10/agile-code-camp/"/>
+    <updated>2014-07-10T20:14:11-07:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/10/agile-code-camp</id>
     <content type="html"><![CDATA[<p>2 hrs</p>
 
 <p>While at the <a href="/blog/2014/07/09/taiwan-startup-meetup/">Taiwan startup meetup</a> a couple of days ago, I expressed my interests in learning coding and checking out some local groups. One awesome guy told me about <a href="http://www.innovatist.org/agile-code-camp/">Agile Code Camp</a>, a free JavaScript development course that practice Agile Development and uses Meteor as web development framework.</p>
@@ -114,9 +114,9 @@ Router.map( function () {
   
   <entry>
     <title type="html"><![CDATA[Codecademy JavaScript Wrap-up]]></title>
-    <link href="http://scootcho.github.io/blog/2014/07/10/codecademy-javascript-wrap-up/"/>
-    <updated>2014-07-10T10:09:02+08:00</updated>
-    <id>http://scootcho.github.io/blog/2014/07/10/codecademy-javascript-wrap-up</id>
+    <link href="http://scootcho.github.io/blog/2014/07/09/codecademy-javascript-wrap-up/"/>
+    <updated>2014-07-09T19:09:02-07:00</updated>
+    <id>http://scootcho.github.io/blog/2014/07/09/codecademy-javascript-wrap-up</id>
     <content type="html"><![CDATA[<p>4.5 hrs</p>
 
 <p>I&rsquo;m almost done with the <a href="http://www.codecademy.com/tracks/javascript">JavaScript Track</a> (@86%), and I&rsquo;m planning to wrap that up with 1-2 more hrs. I feel my foundation is getting a better. This should get me a littler further for more JavaScript codes but I&rsquo;m planning to read a book to emphasize on foundations. After all, to be able to understand and use a language, a solid foundation will make one more fluent. Since I think I will be using JavaScript long time down the road, it should be a great investment of my time.</p>
@@ -130,7 +130,7 @@ Router.map( function () {
   <entry>
     <title type="html"><![CDATA[Codecademy JavaScript Continue]]></title>
     <link href="http://scootcho.github.io/blog/2014/07/08/codecademy-javascript-continue/"/>
-    <updated>2014-07-08T22:39:52+08:00</updated>
+    <updated>2014-07-08T07:39:52-07:00</updated>
     <id>http://scootcho.github.io/blog/2014/07/08/codecademy-javascript-continue</id>
     <content type="html"><![CDATA[<p>3.5 hrs</p>
 
